@@ -1,2 +1,9 @@
 # r-strs
-Package that wraps stringr and stringi, providing functions that mimic python's str class
+
+This package's goal is to reimplement the python string methods. I am not trying
+to reimplement the entire class just the methods.
+
+## Links
+
+- [Python string methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
+- [Basic stringi](https://stringi.gagolewski.com/weave/basic_operations.html)
