@@ -5,53 +5,59 @@ to reimplement the entire class just the methods.
 
 ## Functions
 
-- [ ] capitalize
-- [ ] casefold
-- [ ] center
-- [ ] count
+- [x] capitalize
+- [x] casefold
+- [x] center
+- [x] count
 - [ ] encode
-- [ ] endswith
-- [ ] expandtabs
-- [ ] find
-- [ ] format
-- [ ] format_map
+- [x] endswith
+- [x] expandtabs
+- [x] find
+- [x] format/format_map
 - [ ] index
-- [ ] isalnum
-- [ ] isalpha
+- [x] isalnum
+- [x] isalpha
 - [ ] isascii
 - [ ] isdecimal
-- [ ] isdigit
+- [x] isdigit
 - [ ] isidentifier
-- [ ] islower
+- [x] islower
 - [ ] isnumeric
 - [ ] isprintable
-- [ ] isspace
-- [ ] istitle
-- [ ] isupper
-- [ ] join
-- [ ] ljust
-- [ ] lower
-- [ ] lstrip
+- [x] isspace
+- [x] istitle
+- [x] isupper
+- [x] join
+- [x] ljust
+- [x] lower
+- [x] lstrip
 - [ ] maketrans
 - [ ] partition
-- [ ] removeprefix
-- [ ] removesuffix
-- [ ] replace
-- [ ] rfind
+- [x] removeprefix
+- [x] removesuffix
+- [x] replace
+- [x] rfind
 - [ ] rindex
-- [ ] rjust
+- [x] rjust
 - [ ] rpartition
 - [ ] rsplit
-- [ ] rstrip
-- [ ] split
-- [ ] splitlines
-- [ ] startswith
-- [ ] strip
+- [x] rstrip
+- [x] split
+- [x] splitlines
+- [x] startswith
+- [x] strip
 - [ ] swapcase
-- [ ] title
+- [x] title
 - [ ] translate
-- [ ] upper
+- [x] upper
 - [ ] zfill
+
+## Additional methods
+
+- contains
+- normalize_whitespace
+- rep
+- wrap
 
 ## Links
 
