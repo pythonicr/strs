@@ -7,7 +7,6 @@ functions use [stringi](https://stringi.gagolewski.com/index.html) or
 [stringr](https://stringr.tidyverse.org/), so this package is mostly a
 convenience wrapper for anyone regularly switching between Python and R.
 
-
 ## Todo
 
 - Improve the documentation
