@@ -1,4 +1,7 @@
 url: https://garth74.github.io/r-strs/
 template:
   bootstrap: 5
+  bootswatch: cerulean
 
+development:
+  mode: auto
