@@ -1,32 +1,24 @@
 .str_strip <- function(string, side = c("left", "right", "both"), chars = NULL) {
-  side <- match.arg(side)
   if (is.null(chars)) {
-    return(stringr::str_trim(string, side))
+    return(stringi::stri_trim(string, match.arg(side)))
   }
-  chars <- stringr::fixed(strs_join("", chars))
-  pattern <- paste0("[", chars, "]+")
+  checkmate::qassert(chars, "S+")
+  chars <- stringr::str_escape(stringi::stri_flatten(chars))
+  base_pattern <- paste0("[", chars, "]+")
 
-  if (side %in% c("left", "both")) {
-    string <- stringr::str_replace_all(
-      string,
-      strs_join("", c("^", pattern)), ""
-    )
-  }
-
-  if (side %in% c("right", "both")) {
-    string <- stringr::str_replace_all(
-      string,
-      strs_join("", c(pattern, "$")), ""
-    )
-  }
-  return(string)
+  pattern <- switch(match.arg(side),
+    "left"  = paste0("^", base_pattern),
+    "right" = paste0(base_pattern, "$"),
+    "both"  = paste0(paste0("^", base_pattern), "|", paste0(base_pattern, "$"))
+  )
+  stringr::str_replace_all(string, pattern, "")
 }
 
 .str_remove <- function(string, substring, type = c("prefix", "suffix")) {
-  escaped <- stringr::fixed(substring)
+  escaped <- stringr::str_escape(substring)
   pattern <- switch(match.arg(type),
-    "suffix" = strs_join("", c(escaped, "$")),
-    "prefix" = strs_join("", c("^", escaped)),
+    "suffix" = paste0(escaped, "$"),
+    "prefix" = paste0("^", escaped),
   )
   stringr::str_replace(string, pattern, "")
 }
