@@ -1,6 +1,9 @@
 #' @title strs_islower
-#' @description Check whether ``string`` only contains lowercase letters.
+#' @description Check whether all cased characters of ``string`` are lowercased.
 #' @export
 strs_islower <- function(string) {
-  stringr::str_detect(string, pattern = "^[:lower:]+$")
+  stringi::stri_detect_regex(
+    stringi::stri_replace_all_regex(string, "\\P{CASED}", ""),
+    .patterns$lower
+  )
 }

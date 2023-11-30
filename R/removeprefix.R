@@ -2,5 +2,7 @@
 #' @description Remove a prefix from a string.
 #' @export
 strs_removeprefix <- function(string, prefix) {
-  .str_remove(string, prefix, "prefix")
+  stringi::stri_replace_first_regex(
+    string, paste0("^\\Q", prefix, "\\E"), ""
+  )
 }

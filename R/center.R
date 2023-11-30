@@ -3,5 +3,5 @@
 #' @inheritParams stringr::str_pad
 #' @export
 strs_center <- function(string, width, fillchar = " ") {
-  stringr::str_pad(string, width, side = "both", pad = fillchar)
+  stringi::stri_pad_both(string, width, pad = fillchar)
 }

@@ -4,7 +4,7 @@
 \alias{strs_slice}
 \title{strs_slice}
 \usage{
-strs_slice(string, start = 1L, stop = NULL)
+strs_slice(string, start = 1L, stop = -1L)
 }
 \description{
 Python like string slicing where negative values are treated as

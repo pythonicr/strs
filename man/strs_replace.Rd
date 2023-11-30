@@ -4,26 +4,11 @@
 \alias{strs_replace}
 \title{strs_replace}
 \usage{
-strs_replace(string, pattern, replacement)
+strs_replace(string, substring, replacement)
 }
 \arguments{
 \item{string}{Input vector. Either a character vector, or something
 coercible to one.}
-
-\item{pattern}{Pattern to look for.
-
-The default interpretation is a regular expression, as described
-in \link[stringi:about_search_regex]{stringi::about_search_regex}. Control options with
-\code{\link[stringr:regex]{regex()}}.
-
-For \code{str_replace_all()} this can also be a named vector
-(\code{c(pattern1 = replacement1)}), in order to perform multiple replacements
-in each element of \code{string}.
-
-Match a fixed string (i.e. by comparing only bytes), using
-\code{\link[stringr:fixed]{fixed()}}. This is fast, but approximate. Generally,
-for matching human text, you'll want \code{\link[stringr:coll]{coll()}} which
-respects character matching rules for the specified locale.}
 
 \item{replacement}{The replacement value, usually a single string,
 but it can be the a vector the same length as \code{string} or \code{pattern}.

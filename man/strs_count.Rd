@@ -4,7 +4,7 @@
 \alias{strs_count}
 \title{strs_count}
 \usage{
-strs_count(string, substring, strart = 1L, end = -1L)
+strs_count(string, substring, start = 1L, end = -1L)
 }
 \description{
 Count the number of occurences of a substring.

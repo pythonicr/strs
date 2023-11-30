@@ -7,7 +7,7 @@
 strs_join <- function(sep, ...) {
   checkmate::qassert(sep, "S1")
   if (...length() == 1) {
-    return(stringr::str_flatten(..1, collapse = sep))
+    return(stringi::stri_flatten(..1, collapse = sep))
   }
-  return(stringr::str_c(..., sep = sep))
+  return(stringi::stri_join(..., sep = sep))
 }

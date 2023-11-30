@@ -4,7 +4,7 @@
 \alias{strs_split}
 \title{strs_split}
 \usage{
-strs_split(string, char = " ", n = Inf)
+strs_split(string, sep = " ", maxsplit = -1L)
 }
 \description{
 Split \code{string} on \code{char}. Passing a value for \code{n}

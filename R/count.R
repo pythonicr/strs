@@ -1,15 +1,13 @@
 #' @title strs_count
 #' @description Count the number of occurences of a substring.
 #' @export
-strs_count <- function(string, substring, strart = 1L, end = -1L) {
-  if (substring == "") {
+strs_count <- function(string, substring, start = 1L, end = -1L) {
+  if (length(substring) == 1 && substring == "") {
     # substring is "", so return the number of empty strings in the string
-    return(stringr::str_length(string) + 1)
+    return(stringi::stri_length(string) + 1)
   }
-
-  if (start != 1L || end != -1L) {
-    string <- stringr::str_sub(string, start = start, end = end)
+  if (!missing(start) || !missing(end)) {
+    string <- stringi::stri_sub(string, from = start, to = end)
   }
-  pattern <- stringr::fixed(substring, ignore_case = FALSE)
-  return(stringr::str_count(string, pattern))
+  stringi::stri_count_fixed(string, substring)
 }

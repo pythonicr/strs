@@ -8,4 +8,6 @@ strs_isupper(string)
 }
 \description{
 Check whether \code{string} only contains uppercase letters.
+Technically this deviates from how it is defined in python which is that all
+cased characters are uppercase with at least one cased character.
 }

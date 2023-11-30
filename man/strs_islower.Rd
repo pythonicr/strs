@@ -7,5 +7,5 @@
 strs_islower(string)
 }
 \description{
-Check whether \code{string} only contains lowercase letters.
+Check whether all cased characters of \code{string} are lowercased.
 }
