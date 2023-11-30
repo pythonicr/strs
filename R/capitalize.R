@@ -4,5 +4,8 @@
 #' @inheritParams stringr::str_to_sentence
 #' @export
 strs_capitalize <- function(string, locale = "en") {
-  return(stringr::str_to_sentence(string, locale))
+  stringi::stri_trans_totitle(string, opts_brkiter = stringi::stri_opts_brkiter(
+    type = "sentence",
+    locale = locale
+  ))
 }
