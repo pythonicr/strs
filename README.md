@@ -11,8 +11,7 @@ convenience wrapper for anyone regularly switching between Python and R.
 
 - Improve the documentation
   - If the function is implemented it should do exactly the same thing as the
-    Python equivalent. So the documentation should *mostly* be copy and paste.
-    Some exceptions exist with `strs_join`.
+    Python equivalent.
 
 - Implement public methods
   - [x] capitalize
