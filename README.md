@@ -7,6 +7,14 @@ functions use [stringi](https://stringi.gagolewski.com/index.html) or
 [stringr](https://stringr.tidyverse.org/), so this package is mostly a
 convenience wrapper for anyone regularly switching between Python and R.
 
+## Install
+
+This package still needs to be added to CRAN.
+
+```
+remotes::install_github("garth74/r-strs")
+```
+
 ## Todo
 
 - Improve the documentation
