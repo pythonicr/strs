@@ -16,6 +16,6 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://github.com/pyRomatics/strs
-BugReports: https://github.com/pyRomatics/strs/issues
 Config/Needs/website: pyRomatics/pyRomaticstemplate
+URL: https://github.com/pyRomatics/strs,  https://pyromatics.github.io/strs
+BugReports: https://github.com/pyRomatics/strs/issues
