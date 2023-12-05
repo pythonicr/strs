@@ -11,9 +11,7 @@ convenience wrapper for anyone regularly switching between Python and R.
 
 This package still needs to be added to CRAN.
 
-```
-remotes::install_github("garth74/r-strs")
-```
+`remotes::install_github("pyRomatics/strs")`
 
 ## Todo
 

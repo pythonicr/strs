@@ -1,7 +1,8 @@
-url: https://garth74.github.io/r-strs/
+url: https://pyRomatics.github.io/strs/
+
 template:
   bootstrap: 5
-  bootswatch: cerulean
+  package: pyRomaticstemplate
 
 development:
   mode: auto
