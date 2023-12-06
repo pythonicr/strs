@@ -1,7 +1,7 @@
-url: https://pyromatics.github.io/strs/
+url: https://pythonicr.github.io/strs/
 template:
   bootstrap: 5
-  package: pyRomaticstemplate
+  package: pythonicrtemplate
 
 development:
   mode: auto
