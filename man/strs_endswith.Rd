@@ -2,10 +2,29 @@
 % Please edit documentation in R/endswith.R
 \name{strs_endswith}
 \alias{strs_endswith}
-\title{strs_endswith}
+\title{Check if String Ends With a Specified Suffix}
 \usage{
 strs_endswith(string, suffix)
 }
+\arguments{
+\item{string}{A character vector where each element is a string to be
+checked.}
+
+\item{suffix}{The suffix to check for at the end of each element of \code{string}.}
+}
+\value{
+A logical vector of the same length as \code{string}, with each element
+indicating whether the corresponding element of \code{string} ends with \code{suffix}.
+}
 \description{
-Check whether a string ends with \code{suffix}.
+\code{strs_endswith} determines whether each element of a character vector ends
+with a specified suffix. This function is similar to Python's
+\code{str.endswith()} method.
+}
+\examples{
+strs_endswith("hello world", "world")
+strs_endswith(c("test", "hello", "world"), "ld")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.endswith}{Python str.endswith() documentation}
 }

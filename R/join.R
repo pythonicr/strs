@@ -1,13 +1,18 @@
-#' @title strs_join
-#' @description If a single object is passed in after the separator, it's
-#' assumed the user wants to flatten. If several objects are passed, it's
-#' assumed that the user wants to concatenate.
-#' @param sep string inserted between each character
+#' Join Elements into a Single String with a Separator
+#'
+#' `strs_join` concatenates elements of `iterable` using `sep`. It is similar to
+#' Python's `str.join()`.
+#'
+#' @param sep A string separator used to join the elements.
+#' @param iterable A character vector to be joined.
+#' @return A single string with elements of `iterable` joined by `sep`.
+#' @examples
+#' strs_join("-", c("hello", "world"))
+#' strs_join("", c("hello", "world"))  # no separator
+#' @seealso [Python str.join() documentation](https://docs.python.org/3/library/stdtypes.html#str.join)
 #' @export
-strs_join <- function(sep, ...) {
+strs_join <- function(sep, iterable) {
   checkmate::qassert(sep, "S1")
-  if (...length() == 1) {
-    return(stringi::stri_flatten(..1, collapse = sep))
-  }
-  return(stringi::stri_join(..., sep = sep))
+  checkmate::qassert(iterable, "S")
+  stringi::stri_join(iterable, collapse = sep)
 }

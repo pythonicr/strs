@@ -2,10 +2,31 @@
 % Please edit documentation in R/rjust.R
 \name{strs_rjust}
 \alias{strs_rjust}
-\title{strs_rjust}
+\title{Right-justify String in a Field of a Given Width}
 \usage{
 strs_rjust(string, width, fillchar = " ")
 }
+\arguments{
+\item{string}{A character vector where each element is a string to be
+right-justified.}
+
+\item{width}{The total width of the field in which the string is to be
+right-justified.}
+
+\item{fillchar}{A character used for padding on the left.}
+}
+\value{
+A character vector of the same length as \code{string}, with each element
+right-justified in a field of the specified width.
+}
 \description{
-Add padding to the right of a string.
+\code{strs_rjust} right-justifies each element of a character vector in a field of
+a specified width. It is similar to Python's \code{str.rjust()} method.
+}
+\examples{
+strs_rjust("hello", 10)
+strs_rjust("world", 10, "*")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.rjust}{Python str.rjust() documentation}
 }

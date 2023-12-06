@@ -29,7 +29,8 @@ The package currently isn't on CRAN, so you'll have to install it using
   - [x] endswith
   - [x] expandtabs
   - [x] find
-  - [x] format/format_map
+  - [ ] format
+  - [ ] format_map
   - [ ] index
   - [x] isalnum
   - [x] isalpha
@@ -41,7 +42,7 @@ The package currently isn't on CRAN, so you'll have to install it using
   - [x] isnumeric
   - [ ] isprintable
   - [x] isspace
-  - [x] istitle
+  - [ ] istitle
   - [x] isupper
   - [x] join
   - [x] ljust

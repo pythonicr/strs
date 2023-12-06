@@ -2,12 +2,28 @@
 % Please edit documentation in R/title.R
 \name{strs_title}
 \alias{strs_title}
-\title{strs_title
-Convert a string to titlecase.}
+\title{Convert String to Title Case}
 \usage{
 strs_title(string, locale = "en")
 }
+\arguments{
+\item{string}{A character vector to be converted to title case.}
+
+\item{locale}{A character string representing the locale to be used for the
+conversion.}
+}
+\value{
+A character vector of the same length as \code{string}, with each element
+converted to title case.
+}
 \description{
-strs_title
-Convert a string to titlecase.
+\code{strs_title} converts each element of a character vector to title case, based
+on the specified locale. It is similar to Python's \code{str.title()} method.
+}
+\examples{
+strs_title("hello world")
+strs_title("guten tag", locale = "de")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.title}{Python str.title() documentation}
 }

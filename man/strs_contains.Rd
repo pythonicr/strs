@@ -2,14 +2,27 @@
 % Please edit documentation in R/contains.R
 \name{strs_contains}
 \alias{strs_contains}
-\title{strs_contains}
+\title{Check if String Contains a Substring}
 \usage{
 strs_contains(string, substring)
 }
 \arguments{
-\item{string}{Input vector. Either a character vector, or something
-coercible to one.}
+\item{string}{A character vector where each element is a string to be
+checked.}
+
+\item{substring}{The substring to search for within each element of \code{string}.}
+}
+\value{
+A logical vector of the same length as \code{string}, with each element
+indicating whether the corresponding element of \code{string} contains
+\code{substring}.
 }
 \description{
-Check whether a string contains the substring.
+\code{strs_contains} checks whether each element of a character vector contains a
+specified substring. This function mirrors the functionality of Python's
+\code{str.__contains__()} method.
+}
+\examples{
+strs_contains("hello world", "world")
+strs_contains(c("apple", "banana", "cherry"), "a")
 }

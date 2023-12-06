@@ -2,12 +2,28 @@
 % Please edit documentation in R/upper.R
 \name{strs_upper}
 \alias{strs_upper}
-\title{strs_upper
-Convert a string to upper case.}
+\title{Convert String to Uppercase}
 \usage{
 strs_upper(string, locale = "en")
 }
+\arguments{
+\item{string}{A character vector to be converted to uppercase.}
+
+\item{locale}{A character string representing the locale to be used for the
+conversion.}
+}
+\value{
+A character vector of the same length as \code{string}, with each element
+converted to uppercase.
+}
 \description{
-strs_upper
-Convert a string to upper case.
+\code{strs_upper} converts each element of a character vector to uppercase, based
+on the specified locale. It is similar to Python's \code{str.upper()} method.
+}
+\examples{
+strs_upper("hello world")
+strs_upper("äpfel", locale = "de")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.upper}{Python str.upper() documentation}
 }

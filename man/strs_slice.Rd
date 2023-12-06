@@ -2,11 +2,28 @@
 % Please edit documentation in R/slice.R
 \name{strs_slice}
 \alias{strs_slice}
-\title{strs_slice}
+\title{Slice Substrings from a String}
 \usage{
 strs_slice(string, start = 1L, stop = -1L)
 }
+\arguments{
+\item{string}{A character vector where each element is a string to slice.}
+
+\item{start}{The starting position for slicing (inclusive).}
+
+\item{stop}{The ending position for slicing (exclusive).}
+}
+\value{
+A character vector of the same length as \code{string}, with each element
+being the sliced substring.
+}
 \description{
-Python like string slicing where negative values are treated as
-the end of the string.
+\code{strs_slice} extracts substrings from each element of a character vector,
+specified by start and stop positions. It is similar to Python's slicing
+syntax for strings.
+}
+\examples{
+strs_slice("hello world", 1, 5)
+strs_slice("hello world", 7)
+strs_slice("hello world", start = 7, stop = 11)
 }

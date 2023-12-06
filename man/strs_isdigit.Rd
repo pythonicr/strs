@@ -2,10 +2,25 @@
 % Please edit documentation in R/isdigit.R
 \name{strs_isdigit}
 \alias{strs_isdigit}
-\title{strs_isdigit}
+\title{Check if String Contains Only Digits}
 \usage{
 strs_isdigit(string)
 }
+\arguments{
+\item{string}{A character vector to be checked.}
+}
+\value{
+A logical vector of the same length as \code{string}, indicating whether
+each element contains only digits.
+}
 \description{
-Check whether \code{string} only contains digits.
+\code{strs_isdigit} checks whether each element of a character vector contains
+only digits. It is similar to Python's \code{str.isdigit()} method.
+}
+\examples{
+strs_isdigit("12345")
+strs_isdigit("123a")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.isdigit}{Python str.isdigit() documentation}
 }

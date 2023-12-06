@@ -2,10 +2,28 @@
 % Please edit documentation in R/removesuffix.R
 \name{strs_removesuffix}
 \alias{strs_removesuffix}
-\title{strs_removesuffix}
+\title{Remove a Suffix from a String}
 \usage{
 strs_removesuffix(string, suffix)
 }
+\arguments{
+\item{string}{A character vector where each element is a string from which to
+remove the suffix.}
+
+\item{suffix}{The suffix to remove.}
+}
+\value{
+A character vector of the same length as \code{string}, with the \code{suffix}
+removed from each element.
+}
 \description{
-Remove a suffix from a string.
+\code{strs_removesuffix} removes a specified suffix from the end of each element
+of a character vector. It is similar to Python's \code{str.removesuffix()} method.
+}
+\examples{
+strs_removesuffix("StringTest", "Test")
+strs_removesuffix("hello world", "world")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.removesuffix}{Python str.removesuffix() documentation}
 }

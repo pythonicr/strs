@@ -2,11 +2,30 @@
 % Please edit documentation in R/rstrip.R
 \name{strs_rstrip}
 \alias{strs_rstrip}
-\title{strs_rstrip}
+\title{Right Strip Characters from a String}
 \usage{
 strs_rstrip(string, chars = NULL)
 }
+\arguments{
+\item{string}{A character vector where each element is a string to be
+right-stripped.}
+
+\item{chars}{An optional string of characters to be removed from the end of
+each element. If NULL, whitespace is removed.}
+}
+\value{
+A character vector of the same length as \code{string}, with specified
+characters removed from the end of each element.
+}
 \description{
-Remove \code{chars} from the right end of a string. If \code{chars} is
-NULL, this function removes whitespace.
+\code{strs_rstrip} removes trailing characters (spaces by default) from each
+element of a character vector. It is similar to Python's \code{str.rstrip()}
+method.
+}
+\examples{
+strs_rstrip("hello world    ")
+strs_rstrip("hello worldxxx", chars = "x")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.rstrip}{Python str.rstrip() documentation}
 }

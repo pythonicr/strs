@@ -2,10 +2,25 @@
 % Please edit documentation in R/isspace.R
 \name{strs_isspace}
 \alias{strs_isspace}
-\title{strs_isspace}
+\title{Check if String Contains Only Whitespace Characters}
 \usage{
 strs_isspace(string)
 }
+\arguments{
+\item{string}{A character vector to be checked.}
+}
+\value{
+A logical vector of the same length as \code{string}, indicating whether
+each element contains only whitespace characters.
+}
 \description{
-Check whether \code{string} only contains whitespace characters.
+\code{strs_isspace} checks whether each element of a character vector contains
+only whitespace characters. It is similar to Python's \code{str.isspace()} method.
+}
+\examples{
+strs_isspace("    ")
+strs_isspace("hello world")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.isspace}{Python str.isspace() documentation}
 }

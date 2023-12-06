@@ -2,10 +2,40 @@
 % Please edit documentation in R/count.R
 \name{strs_count}
 \alias{strs_count}
-\title{strs_count}
+\title{Count Occurrences of a Substring in a String}
 \usage{
 strs_count(string, substring, start = 1L, end = -1L)
 }
+\arguments{
+\item{string}{A character vector where each element is a string in which to
+count occurrences of \code{substring}.}
+
+\item{substring}{The substring to count within each element of \code{string}.}
+
+\item{start}{An optional integer specifying the starting position in each
+element of \code{string} for the search. Defaults to 1, indicating the start of
+the string.}
+
+\item{end}{An optional integer specifying the ending position in each element
+of \code{string} for the search. The default value of -1 indicates the end of the
+string.}
+}
+\value{
+An integer vector of the same length as \code{string}, with each element
+indicating the count of \code{substring} in the corresponding element of \code{string}.
+}
 \description{
-Count the number of occurences of a substring.
+\code{strs_count} counts the number of times a specified substring occurs in each
+element of a character vector. Optionally, the search can be limited to a
+substring of each element, specified by \code{start} and \code{end} positions. This
+function is similar to Python's \code{str.count()} method.
+}
+\examples{
+strs_count("hello world", "o")
+strs_count("banana", "na")
+strs_count("hello world", "o", start = 6)
+strs_count("hello world", "o", end = 5)
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.count}{Python str.count() documentation}
 }

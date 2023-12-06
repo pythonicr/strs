@@ -2,19 +2,28 @@
 % Please edit documentation in R/lower.R
 \name{strs_lower}
 \alias{strs_lower}
-\title{strs_lower}
+\title{Convert String to Lowercase}
 \usage{
 strs_lower(string, locale = "en")
 }
 \arguments{
-\item{string}{Input vector. Either a character vector, or something
-coercible to one.}
+\item{string}{A character vector to be converted to lowercase.}
 
-\item{locale}{Locale to use for comparisons. See
-\code{\link[stringi:stri_locale_list]{stringi::stri_locale_list()}} for all possible options.
-Defaults to "en" (English) to ensure that default behaviour is
-consistent across platforms.}
+\item{locale}{A character string representing the locale to be used for the
+conversion.}
+}
+\value{
+A character vector of the same length as \code{string}, with each element
+converted to lowercase.
 }
 \description{
-strs_lower
+\code{strs_lower} converts each element of a character vector to lowercase, based
+on the specified locale. It is similar to Python's \code{str.lower()} method.
+}
+\examples{
+strs_lower("HELLO WORLD")
+strs_lower("Äpfel", locale = "de")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.lower}{Python str.lower() documentation}
 }

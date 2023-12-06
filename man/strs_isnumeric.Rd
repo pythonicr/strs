@@ -2,10 +2,25 @@
 % Please edit documentation in R/isnumeric.R
 \name{strs_isnumeric}
 \alias{strs_isnumeric}
-\title{strs_isnumeric}
+\title{Check if String Contains Only Numeric Characters}
 \usage{
 strs_isnumeric(string)
 }
+\arguments{
+\item{string}{A character vector to be checked.}
+}
+\value{
+A logical vector of the same length as \code{string}, indicating whether
+each element contains only numeric characters.
+}
 \description{
-Check whether \code{string} only contains digits.
+\code{strs_isnumeric} checks whether each element of a character vector contains
+only numeric characters. It is similar to Python's \code{str.isnumeric()} method.
+}
+\examples{
+strs_isnumeric("12345")
+strs_isnumeric("123a") # contains a non-numeric character
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.isnumeric}{Python str.isnumeric() documentation}
 }

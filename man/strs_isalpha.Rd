@@ -2,10 +2,26 @@
 % Please edit documentation in R/isalpha.R
 \name{strs_isalpha}
 \alias{strs_isalpha}
-\title{strs_isalpha}
+\title{Check if String Contains Only Alphabetical Characters}
 \usage{
 strs_isalpha(string)
 }
+\arguments{
+\item{string}{A character vector to be checked.}
+}
+\value{
+A logical vector of the same length as \code{string}, indicating whether
+each element contains only alphabetical characters.
+}
 \description{
-Check whether \code{string} only contains letters.
+\code{strs_isalpha} checks whether each element of a character vector contains
+only alphabetical characters. It is similar to Python's \code{str.isalpha()}
+method.
+}
+\examples{
+strs_isalpha("hello")
+strs_isalpha("hello123")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.isalpha}{Python str.isalpha() documentation}
 }

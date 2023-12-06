@@ -2,10 +2,25 @@
 % Please edit documentation in R/isdecimal.R
 \name{strs_isdecimal}
 \alias{strs_isdecimal}
-\title{strs_isdecimal}
+\title{Check if String Contains Only Decimal Characters}
 \usage{
 strs_isdecimal(string)
 }
+\arguments{
+\item{string}{A character vector to be checked.}
+}
+\value{
+A logical vector of the same length as \code{string}, indicating whether
+each element contains only decimal characters.
+}
 \description{
-Check whether \code{string} only contains digits.
+\code{strs_isdecimal} checks whether each element of a character vector contains
+only decimal characters. It is similar to Python's \code{str.isdecimal()} method.
+}
+\examples{
+strs_isdecimal("12345")
+strs_isdecimal("123.45") # FALSE
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.isdecimal}{Python str.isdecimal() documentation}
 }

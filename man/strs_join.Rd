@@ -2,15 +2,26 @@
 % Please edit documentation in R/join.R
 \name{strs_join}
 \alias{strs_join}
-\title{strs_join}
+\title{Join Elements into a Single String with a Separator}
 \usage{
-strs_join(sep, ...)
+strs_join(sep, iterable)
 }
 \arguments{
-\item{sep}{string inserted between each character}
+\item{sep}{A string separator used to join the elements.}
+
+\item{iterable}{A character vector to be joined.}
+}
+\value{
+A single string with elements of \code{iterable} joined by \code{sep}.
 }
 \description{
-If a single object is passed in after the separator, it's
-assumed the user wants to flatten. If several objects are passed, it's
-assumed that the user wants to concatenate.
+\code{strs_join} concatenates elements of \code{iterable} using \code{sep}. It is similar to
+Python's \code{str.join()}.
+}
+\examples{
+strs_join("-", c("hello", "world"))
+strs_join("", c("hello", "world"))  # no separator
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.join}{Python str.join() documentation}
 }

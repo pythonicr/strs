@@ -2,20 +2,30 @@
 % Please edit documentation in R/capitalize.R
 \name{strs_capitalize}
 \alias{strs_capitalize}
-\title{strs_capitalize}
+\title{Capitalize the First Character of Each Sentence}
 \usage{
 strs_capitalize(string, locale = "en")
 }
 \arguments{
-\item{string}{Input vector. Either a character vector, or something
-coercible to one.}
+\item{string}{A character vector where each element is a string to be
+capitalized.}
 
-\item{locale}{Locale to use for comparisons. See
-\code{\link[stringi:stri_locale_list]{stringi::stri_locale_list()}} for all possible options.
-Defaults to "en" (English) to ensure that default behaviour is
-consistent across platforms.}
+\item{locale}{A character string representing the locale to be used for
+capitalization. Defaults to "en" (English). The locale affects the rules for
+identifying sentences in the string.}
+}
+\value{
+A character vector of the same length as \code{string}, where each element
+is the capitalized version of the corresponding element in \code{string}.
 }
 \description{
-Convert the first character of a string to uppercase and the
-remaining characters to lowercase.
+This function capitalizes the first character of each string in a given
+string, based on the specified locale. This is similar to Python's
+\code{str.capitalize()} method.
+}
+\examples{
+strs_capitalize("hello world")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.capitalize}{Python str.capitalize() documentation}
 }

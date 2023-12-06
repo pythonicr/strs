@@ -2,23 +2,31 @@
 % Please edit documentation in R/replace.R
 \name{strs_replace}
 \alias{strs_replace}
-\title{strs_replace}
+\title{Replace Substring in a String}
 \usage{
 strs_replace(string, substring, replacement)
 }
 \arguments{
-\item{string}{Input vector. Either a character vector, or something
-coercible to one.}
+\item{string}{A character vector where each element is a string in which to
+replace \code{substring}.}
 
-\item{replacement}{The replacement value, usually a single string,
-but it can be the a vector the same length as \code{string} or \code{pattern}.
-References of the form \verb{\\1}, \verb{\\2}, etc will be replaced with
-the contents of the respective matched group (created by \verb{()}).
+\item{substring}{The substring to be replaced.}
 
-Alternatively, supply a function, which will be called once for each
-match (from right to left) and its return value will be used to replace
-the match.}
+\item{replacement}{The string to replace \code{substring} with.}
+}
+\value{
+A character vector of the same length as \code{string}, with \code{substring}
+replaced by \code{replacement}.
 }
 \description{
-Replace substrings in a string.
+\code{strs_replace} replaces all occurrences of a specified substring in each
+element of a character vector. It is similar to Python's \code{str.replace()}
+method.
+}
+\examples{
+strs_replace("hello world", "world", "there")
+strs_replace("banana", "na", "mo")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.replace}{Python str.replace() documentation}
 }

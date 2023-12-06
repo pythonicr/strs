@@ -2,12 +2,25 @@
 % Please edit documentation in R/isupper.R
 \name{strs_isupper}
 \alias{strs_isupper}
-\title{strs_isupper}
+\title{Check if String is in Uppercase}
 \usage{
 strs_isupper(string)
 }
+\arguments{
+\item{string}{A character vector to be checked.}
+}
+\value{
+A logical vector of the same length as \code{string}, indicating whether
+each element is entirely in uppercase.
+}
 \description{
-Check whether \code{string} only contains uppercase letters.
-Technically this deviates from how it is defined in python which is that all
-cased characters are uppercase with at least one cased character.
+\code{strs_isupper} checks whether each element of a character vector is in
+uppercase. It is similar to Python's \code{str.isupper()} method.
+}
+\examples{
+strs_isupper("HELLO")
+strs_isupper("Hello")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.isupper}{Python str.isupper() documentation}
 }

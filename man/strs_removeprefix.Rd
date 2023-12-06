@@ -2,10 +2,28 @@
 % Please edit documentation in R/removeprefix.R
 \name{strs_removeprefix}
 \alias{strs_removeprefix}
-\title{strs_removeprefix}
+\title{Remove a Prefix from a String}
 \usage{
 strs_removeprefix(string, prefix)
 }
+\arguments{
+\item{string}{A character vector where each element is a string from which to
+remove the prefix.}
+
+\item{prefix}{The prefix to remove.}
+}
+\value{
+A character vector of the same length as \code{string}, with the \code{prefix}
+removed from each element.
+}
 \description{
-Remove a prefix from a string.
+\code{strs_removeprefix} removes a specified prefix from the start of each element
+of a character vector. It is similar to Python's \code{str.removeprefix()} method.
+}
+\examples{
+strs_removeprefix("testString", "test")
+strs_removeprefix("hello world", "hello")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.removeprefix}{Python str.removeprefix() documentation}
 }

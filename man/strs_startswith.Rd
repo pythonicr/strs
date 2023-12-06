@@ -2,10 +2,31 @@
 % Please edit documentation in R/startswith.R
 \name{strs_startswith}
 \alias{strs_startswith}
-\title{strs_startswith}
+\title{Check if String Starts With a Specified Prefix}
 \usage{
 strs_startswith(string, prefix)
 }
+\arguments{
+\item{string}{A character vector where each element is a string to be
+checked.}
+
+\item{prefix}{The prefix to check for at the start of each element of
+\code{string}.}
+}
+\value{
+A logical vector of the same length as \code{string}, with each element
+indicating whether the corresponding element of \code{string} starts with
+\code{prefix}.
+}
 \description{
-Check whether a string starts with \code{prefix}.
+\code{strs_startswith} determines whether each element of a character vector
+starts with a specified prefix. It is similar to Python's \code{str.startswith()}
+method.
+}
+\examples{
+strs_startswith("hello world", "hello")
+strs_startswith(c("test", "hello", "world"), "te")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.startswith}{Python str.startswith() documentation}
 }

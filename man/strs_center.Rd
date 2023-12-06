@@ -2,16 +2,34 @@
 % Please edit documentation in R/center.R
 \name{strs_center}
 \alias{strs_center}
-\title{strs_center}
+\title{Center a String in a Field of a Given Width}
 \usage{
 strs_center(string, width, fillchar = " ")
 }
 \arguments{
-\item{string}{Input vector. Either a character vector, or something
-coercible to one.}
+\item{string}{A character vector where each element is a string to be
+centered.}
 
-\item{width}{Minimum width of padded strings.}
+\item{width}{The total width of the field in which the string is to be
+centered.}
+
+\item{fillchar}{A character used for padding. If not specified, defaults to a
+space. Only the first character of \code{fillchar} is used if it is longer than
+one character.}
+}
+\value{
+A character vector of the same length as \code{string}, where each element
+has been centered in a field of the specified width.
 }
 \description{
-Add padding to both sides of a string.
+\code{strs_center} centers each element of a character vector in a field of a
+specified width. It pads the string on both sides with a specified character
+(defaulting to a space). This is similar to Python's \code{str.center()} method.
+}
+\examples{
+strs_center("hello", 10)
+strs_center("world", 10, "*")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.center}{Python str.center() documentation}
 }

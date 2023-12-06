@@ -1,11 +1,19 @@
-#' @title strs_isupper
-#' @description Check whether ``string`` only contains uppercase letters.
-#' Technically this deviates from how it is defined in python which is that all
-#' cased characters are uppercase with at least one cased character.
+#' Check if String is in Uppercase
+#'
+#' `strs_isupper` checks whether each element of a character vector is in
+#' uppercase. It is similar to Python's `str.isupper()` method.
+#'
+#' @param string A character vector to be checked.
+#' @return A logical vector of the same length as `string`, indicating whether
+#' each element is entirely in uppercase.
+#' @examples
+#' strs_isupper("HELLO")
+#' strs_isupper("Hello")
+#' @seealso [Python str.isupper() documentation](https://docs.python.org/3/library/stdtypes.html#str.isupper)
 #' @export
 strs_isupper <- function(string) {
   stringi::stri_detect_regex(
-    stringi::stri_replace_all_regex(string, "\\P{CASED}", ""),
-    .patterns$upper
+    string,
+    "^\\P{CASED}*\\p{Lu}+\\P{CASED}*$"
   )
 }

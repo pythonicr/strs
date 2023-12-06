@@ -2,11 +2,30 @@
 % Please edit documentation in R/lstrip.R
 \name{strs_lstrip}
 \alias{strs_lstrip}
-\title{strs_lstrip}
+\title{Left Strip Characters from a String}
 \usage{
 strs_lstrip(string, chars = NULL)
 }
+\arguments{
+\item{string}{A character vector where each element is a string to be
+left-stripped.}
+
+\item{chars}{An optional string of characters to be removed from the
+beginning of each element. If NULL, whitespace is removed.}
+}
+\value{
+A character vector of the same length as \code{string}, with specified
+characters removed from the beginning of each element.
+}
 \description{
-Remove \code{chars} from the left end of a string. If \code{chars} is
-NULL, this function removes whitespace.
+\code{strs_lstrip} removes leading characters (spaces by default) from each
+element of a character vector. It is similar to Python's \code{str.lstrip()}
+method.
+}
+\examples{
+strs_lstrip("    hello world")
+strs_lstrip("xxxyhello world", chars = "xy")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.lstrip}{Python str.lstrip() documentation}
 }

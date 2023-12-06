@@ -2,11 +2,30 @@
 % Please edit documentation in R/strip.R
 \name{strs_strip}
 \alias{strs_strip}
-\title{strs_strip}
+\title{Strip Characters from Both Ends of a String}
 \usage{
 strs_strip(string, chars = NULL)
 }
+\arguments{
+\item{string}{A character vector where each element is a string to be
+stripped.}
+
+\item{chars}{An optional string of characters to be removed from both ends of
+each element. If NULL, whitespace is removed.}
+}
+\value{
+A character vector of the same length as \code{string}, with specified
+characters removed from both ends of each element.
+}
 \description{
-Remove \code{chars} from both ends of a string. If \code{chars} is
-NULL, this function removes whitespace.
+\code{strs_strip} removes leading and trailing characters (spaces by default) from
+each element of a character vector. It is similar to Python's \code{str.strip()}
+method.
+}
+\examples{
+strs_strip("    hello world    ")
+strs_strip("xxxyhello worldyyy", chars = "xy")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.strip}{Python str.strip() documentation}
 }

@@ -2,10 +2,30 @@
 % Please edit documentation in R/expandtabs.R
 \name{strs_expandtabs}
 \alias{strs_expandtabs}
-\title{strs_expandtabs}
+\title{Expand Tabs in a String to Spaces}
 \usage{
 strs_expandtabs(string, tabsize = 8)
 }
+\arguments{
+\item{string}{A character vector where each element is a string in which to
+expand tabs.}
+
+\item{tabsize}{An integer specifying the number of spaces to replace each tab
+character with. Defaults to 8.}
+}
+\value{
+A character vector of the same length as \code{string}, with tabs in each
+element replaced by \code{tabsize} number of spaces.
+}
 \description{
-Replace each \verb{\\t} with spaces.
+\code{strs_expandtabs} replaces each tab character (\verb{\\\\t}) in a string with a
+specified number of spaces. This function behaves similarly to Python's
+\code{str.expandtabs()} method.
+}
+\examples{
+strs_expandtabs("hello\tworld", 4)
+strs_expandtabs("one\ttwo\tthree", 8)
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.expandtabs}{Python str.expandtabs() documentation}
 }

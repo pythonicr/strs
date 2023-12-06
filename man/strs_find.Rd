@@ -2,11 +2,30 @@
 % Please edit documentation in R/find.R
 \name{strs_find}
 \alias{strs_find}
-\title{strs_find}
+\title{Find the First Occurrence of a Substring in a String}
 \usage{
 strs_find(string, substring)
 }
+\arguments{
+\item{string}{A character vector where each element is a string to search.}
+
+\item{substring}{The substring to find within each element of \code{string}.}
+}
+\value{
+An integer vector of the same length as \code{string}, with each element
+representing the starting position of the first occurrence of \code{substring} in
+the corresponding element of \code{string}. If the substring is not found, the
+function returns NA for that element.
+}
 \description{
-Search each string for first occurence of \code{substring}. Returns
-the substring index or NA if not found.
+\code{strs_find} locates the first occurrence of a specified substring within each
+element of a character vector. This function is analogous to Python's
+\code{str.find()} method.
+}
+\examples{
+strs_find("hello world", "world")
+strs_find("hello world", "x")
+}
+\seealso{
+\href{URL_PLACEHOLDER}{Python str.find() documentation}
 }

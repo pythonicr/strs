@@ -2,10 +2,25 @@
 % Please edit documentation in R/isascii.R
 \name{strs_isascii}
 \alias{strs_isascii}
-\title{strs_isascii}
+\title{Check if String Contains Only ASCII Characters}
 \usage{
 strs_isascii(string)
 }
+\arguments{
+\item{string}{A character vector to be checked.}
+}
+\value{
+A logical vector of the same length as \code{string}, indicating whether
+each element contains only ASCII characters.
+}
 \description{
-Check whether \code{string} only contains ascii characters.
+\code{strs_isascii} determines whether each element of a character vector contains
+only ASCII characters. It is similar to Python's \code{str.isascii()} method.
+}
+\examples{
+strs_isascii("hello")
+strs_isascii("héllo")
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.isascii}{Python str.isascii() documentation}
 }

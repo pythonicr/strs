@@ -2,11 +2,30 @@
 % Please edit documentation in R/rfind.R
 \name{strs_rfind}
 \alias{strs_rfind}
-\title{strs_rfind}
+\title{Find the Last Occurrence of a Substring in a String}
 \usage{
 strs_rfind(string, substring)
 }
+\arguments{
+\item{string}{A character vector where each element is a string to search.}
+
+\item{substring}{The substring to find within each element of \code{string}.}
+}
+\value{
+An integer vector of the same length as \code{string}, with each element
+representing the starting position of the last occurrence of \code{substring} in
+the corresponding element of \code{string}. If the substring is not found, the
+function returns NA for that element.
+}
 \description{
-Search each string for the last occurence of \code{substring}.
-Returns the substring index or NA if not found.
+\code{strs_rfind} locates the last occurrence of a specified substring within each
+element of a character vector. It is similar to Python's \code{str.rfind()}
+method.
+}
+\examples{
+strs_rfind("hello world", "o")
+strs_rfind("hello world", "x") # not found
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.rfind}{Python str.rfind() documentation}
 }

@@ -2,10 +2,27 @@
 % Please edit documentation in R/splitlines.R
 \name{strs_splitlines}
 \alias{strs_splitlines}
-\title{strs_splitlines}
+\title{Split String into Lines}
 \usage{
 strs_splitlines(string, keepends = FALSE)
 }
+\arguments{
+\item{string}{A character vector to be split into lines.}
+
+\item{keepends}{A boolean indicating whether to retain line end characters.}
+}
+\value{
+A list of character vectors, with each vector containing lines from
+the corresponding element of \code{string}.
+}
 \description{
-Split \code{string} on newline characters (\verb{\\n}).
+\code{strs_splitlines} splits each element of a character vector into separate
+lines. It is similar to Python's \code{str.splitlines()} method.
+}
+\examples{
+strs_splitlines("hello\nworld\n")
+strs_splitlines("line1\r\nline2\n", keepends = TRUE)
+}
+\seealso{
+\href{https://docs.python.org/3/library/stdtypes.html#str.splitlines}{Python str.splitlines() documentation}
 }
