@@ -19,6 +19,9 @@
     <loc>https://pythonicr.github.io/strs/reference/strs_capitalize.html</loc>
   </url>
   <url>
+    <loc>https://pythonicr.github.io/strs/reference/strs_casefold.html</loc>
+  </url>
+  <url>
     <loc>https://pythonicr.github.io/strs/reference/strs_center.html</loc>
   </url>
   <url>
@@ -35,9 +38,6 @@
   </url>
   <url>
     <loc>https://pythonicr.github.io/strs/reference/strs_find.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_format.html</loc>
   </url>
   <url>
     <loc>https://pythonicr.github.io/strs/reference/strs_isalnum.html</loc>
@@ -62,6 +62,9 @@
   </url>
   <url>
     <loc>https://pythonicr.github.io/strs/reference/strs_isspace.html</loc>
+  </url>
+  <url>
+    <loc>https://pythonicr.github.io/strs/reference/strs_istitle.html</loc>
   </url>
   <url>
     <loc>https://pythonicr.github.io/strs/reference/strs_isupper.html</loc>
@@ -119,8 +122,5 @@
   </url>
   <url>
     <loc>https://pythonicr.github.io/strs/reference/strs_upper.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_wrap.html</loc>
   </url>
 </urlset>
