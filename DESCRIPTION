@@ -1,5 +1,5 @@
 Package: strs
-Title: Python Like String Methods
+Title: Python-ish String Functions in R
 Version: 0.0.1
 Authors@R: 
     person("Garrett", "Shipley", , "garrett.shipley7@gmail.com", role = c("aut", "cre"),
@@ -16,6 +16,6 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Config/Needs/website: pyRomatics/pyRomaticstemplate
-URL: https://github.com/pyRomatics/strs,  https://pyromatics.github.io/strs
-BugReports: https://github.com/pyRomatics/strs/issues
+Config/Needs/website: pythonicr/pythonicrtemplate
+URL: https://github.com/pythonicr/strs,  https://pythonicr.github.io/strs
+BugReports: https://github.com/pythonicr/strs/issues
