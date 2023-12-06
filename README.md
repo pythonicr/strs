@@ -9,11 +9,12 @@ convenience wrapper for anyone regularly switching between Python and R.
 
 ## Install
 
-This package still needs to be added to CRAN.
+The package currently isn't on CRAN, so you'll have to install it using
+[remotes](https://cran.r-project.org/package=remotes).
 
 `remotes::install_github("pythonicr/strs")`
 
-## Todo
+## To do
 
 - Improve the documentation
   - If the function is implemented it should do exactly the same thing as the
