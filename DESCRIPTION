@@ -1,6 +1,6 @@
 Package: strs
 Title: Python-ish String Functions in R
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person("Garrett", "Shipley", , "garrett.shipley7@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
