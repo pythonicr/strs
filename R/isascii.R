@@ -12,8 +12,5 @@
 #' @seealso [Python str.isascii() documentation](https://docs.python.org/3/library/stdtypes.html#str.isascii)
 #' @export
 strs_isascii <- function(string) {
-  stringi::stri_detect_regex(
-    string,
-    pattern = "(^[\\u0000-\\u007F]+$)|(^$)"
-  )
+  stringi::stri_enc_isascii(string)
 }
