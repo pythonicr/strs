@@ -91,11 +91,11 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="strs">strs<a class="anchor" aria-label="anchor" href="#strs"></a>
 </h1></div>
-<p>This package provides string functions that are analogous to those used by <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="external-link">Python’s str class</a>. All functions use <a href="https://stringi.gagolewski.com/index.html" class="external-link">stringi</a> or <a href="https://stringr.tidyverse.org/" class="external-link">stringr</a>, so this package is mostly a convenience wrapper for anyone regularly switching between Python and R.</p>
+<p>This package provides string functions that are analogous to those used by <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="external-link">Python’s str class</a>. All functions use <a href="https://stringi.gagolewski.com/index.html" class="external-link">stringi</a>, so this package is mostly a convenience wrapper for anyone regularly switching between Python and R.</p>
 <div class="section level2">
 <h2 id="install">Install<a class="anchor" aria-label="anchor" href="#install"></a>
 </h2>
-<p>The package currently isn’t on CRAN, so you’ll have to install it using <a href="https://cran.r-project.org/package=remotes" class="external-link">remotes</a>.</p>
+<p>The package isn’t on CRAN, but you can install it using <a href="https://cran.r-project.org/package=remotes" class="external-link">remotes</a>.</p>
 <p><code>remotes::install_github("pythonicr/strs")</code></p>
 </div>
 <div class="section level2">
@@ -109,110 +109,60 @@
 </li>
 <li>Implement public methods
 <ul class="task-list">
-<li>
-<input type="checkbox" disabled checked>capitalize</li>
-<li>
-<input type="checkbox" disabled checked>casefold</li>
-<li>
-<input type="checkbox" disabled checked>center</li>
-<li>
-<input type="checkbox" disabled checked>count</li>
-<li>
-<input type="checkbox" disabled>encode</li>
-<li>
-<input type="checkbox" disabled checked>endswith</li>
-<li>
-<input type="checkbox" disabled checked>expandtabs</li>
-<li>
-<input type="checkbox" disabled checked>find</li>
-<li>
-<input type="checkbox" disabled>format</li>
-<li>
-<input type="checkbox" disabled>format_map</li>
-<li>
-<input type="checkbox" disabled>index</li>
-<li>
-<input type="checkbox" disabled checked>isalnum</li>
-<li>
-<input type="checkbox" disabled checked>isalpha</li>
-<li>
-<input type="checkbox" disabled checked>isascii</li>
-<li>
-<input type="checkbox" disabled checked>isdecimal</li>
-<li>
-<input type="checkbox" disabled checked>isdigit</li>
-<li>
-<input type="checkbox" disabled>isidentifier</li>
-<li>
-<input type="checkbox" disabled checked>islower</li>
-<li>
-<input type="checkbox" disabled checked>isnumeric</li>
-<li>
-<input type="checkbox" disabled>isprintable</li>
-<li>
-<input type="checkbox" disabled checked>isspace</li>
-<li>
-<input type="checkbox" disabled>istitle</li>
-<li>
-<input type="checkbox" disabled checked>isupper</li>
-<li>
-<input type="checkbox" disabled checked>join</li>
-<li>
-<input type="checkbox" disabled checked>ljust</li>
-<li>
-<input type="checkbox" disabled checked>lower</li>
-<li>
-<input type="checkbox" disabled checked>lstrip</li>
-<li>
-<input type="checkbox" disabled>maketrans</li>
-<li>
-<input type="checkbox" disabled>partition</li>
-<li>
-<input type="checkbox" disabled checked>removeprefix</li>
-<li>
-<input type="checkbox" disabled checked>removesuffix</li>
-<li>
-<input type="checkbox" disabled checked>replace</li>
-<li>
-<input type="checkbox" disabled checked>rfind</li>
-<li>
-<input type="checkbox" disabled>rindex</li>
-<li>
-<input type="checkbox" disabled checked>rjust</li>
-<li>
-<input type="checkbox" disabled>rpartition</li>
-<li>
-<input type="checkbox" disabled>rsplit</li>
-<li>
-<input type="checkbox" disabled checked>rstrip</li>
-<li>
-<input type="checkbox" disabled checked>split</li>
-<li>
-<input type="checkbox" disabled checked>splitlines</li>
-<li>
-<input type="checkbox" disabled checked>startswith</li>
-<li>
-<input type="checkbox" disabled checked>strip</li>
-<li>
-<input type="checkbox" disabled>swapcase</li>
-<li>
-<input type="checkbox" disabled checked>title</li>
-<li>
-<input type="checkbox" disabled>translate</li>
-<li>
-<input type="checkbox" disabled checked>upper</li>
-<li>
-<input type="checkbox" disabled>zfill</li>
+<li><label><input type="checkbox" checked>capitalize</label></li>
+<li><label><input type="checkbox" checked>casefold</label></li>
+<li><label><input type="checkbox" checked>center</label></li>
+<li><label><input type="checkbox" checked>count</label></li>
+<li><label><input type="checkbox">encode</label></li>
+<li><label><input type="checkbox" checked>endswith</label></li>
+<li><label><input type="checkbox" checked>expandtabs</label></li>
+<li><label><input type="checkbox" checked>find</label></li>
+<li><label><input type="checkbox">format</label></li>
+<li><label><input type="checkbox">format_map</label></li>
+<li><label><input type="checkbox">index</label></li>
+<li><label><input type="checkbox" checked>isalnum</label></li>
+<li><label><input type="checkbox" checked>isalpha</label></li>
+<li><label><input type="checkbox" checked>isascii</label></li>
+<li><label><input type="checkbox" checked>isdecimal</label></li>
+<li><label><input type="checkbox" checked>isdigit</label></li>
+<li><label><input type="checkbox">isidentifier</label></li>
+<li><label><input type="checkbox" checked>islower</label></li>
+<li><label><input type="checkbox" checked>isnumeric</label></li>
+<li><label><input type="checkbox">isprintable</label></li>
+<li><label><input type="checkbox" checked>isspace</label></li>
+<li><label><input type="checkbox" checked>istitle</label></li>
+<li><label><input type="checkbox" checked>isupper</label></li>
+<li><label><input type="checkbox" checked>join</label></li>
+<li><label><input type="checkbox" checked>ljust</label></li>
+<li><label><input type="checkbox" checked>lower</label></li>
+<li><label><input type="checkbox" checked>lstrip</label></li>
+<li><label><input type="checkbox">maketrans</label></li>
+<li><label><input type="checkbox">partition</label></li>
+<li><label><input type="checkbox" checked>removeprefix</label></li>
+<li><label><input type="checkbox" checked>removesuffix</label></li>
+<li><label><input type="checkbox" checked>replace</label></li>
+<li><label><input type="checkbox" checked>rfind</label></li>
+<li><label><input type="checkbox">rindex</label></li>
+<li><label><input type="checkbox" checked>rjust</label></li>
+<li><label><input type="checkbox">rpartition</label></li>
+<li><label><input type="checkbox">rsplit</label></li>
+<li><label><input type="checkbox" checked>rstrip</label></li>
+<li><label><input type="checkbox" checked>split</label></li>
+<li><label><input type="checkbox" checked>splitlines</label></li>
+<li><label><input type="checkbox" checked>startswith</label></li>
+<li><label><input type="checkbox" checked>strip</label></li>
+<li><label><input type="checkbox">swapcase</label></li>
+<li><label><input type="checkbox" checked>title</label></li>
+<li><label><input type="checkbox">translate</label></li>
+<li><label><input type="checkbox" checked>upper</label></li>
+<li><label><input type="checkbox">zfill</label></li>
 </ul>
 </li>
 <li>Implement dunder methods
 <ul class="task-list">
-<li>
-<input type="checkbox" disabled checked>contains</li>
-<li>
-<input type="checkbox" disabled>add</li>
-<li>
-<input type="checkbox" disabled>mul</li>
+<li><label><input type="checkbox" checked>contains</label></li>
+<li><label><input type="checkbox">add</label></li>
+<li><label><input type="checkbox">mul</label></li>
 </ul>
 </li>
 </ul>
