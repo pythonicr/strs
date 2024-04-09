@@ -3,13 +3,13 @@
 This package provides string functions that are analogous to those used by
 [Python's str
 class](https://docs.python.org/3/library/stdtypes.html#string-methods). All
-functions use [stringi](https://stringi.gagolewski.com/index.html) or
-[stringr](https://stringr.tidyverse.org/), so this package is mostly a
-convenience wrapper for anyone regularly switching between Python and R.
+functions use [stringi](https://stringi.gagolewski.com/index.html), so this
+package is mostly a convenience wrapper for anyone regularly switching between
+Python and R.
 
 ## Install
 
-The package currently isn't on CRAN, so you'll have to install it using
+The package isn't on CRAN, but you can install it using
 [remotes](https://cran.r-project.org/package=remotes).
 
 `remotes::install_github("pythonicr/strs")`
@@ -42,7 +42,7 @@ The package currently isn't on CRAN, so you'll have to install it using
   - [x] isnumeric
   - [ ] isprintable
   - [x] isspace
-  - [ ] istitle
+  - [x] istitle
   - [x] isupper
   - [x] join
   - [x] ljust
