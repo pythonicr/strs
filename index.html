@@ -89,25 +89,403 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="strs">strs<a class="anchor" aria-label="anchor" href="#strs"></a>
+<div class="page-header"><h1 id="strs-string-manipulation-functions-in-r">strs: String Manipulation Functions in R<a class="anchor" aria-label="anchor" href="#strs-string-manipulation-functions-in-r"></a>
 </h1></div>
-<p>This package provides string functions that are analogous to those used by <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="external-link">Python’s str class</a>. All functions use <a href="https://stringi.gagolewski.com/index.html" class="external-link">stringi</a>, so this package is mostly a convenience wrapper for anyone regularly switching between Python and R.</p>
 <div class="section level2">
-<h2 id="install">Install<a class="anchor" aria-label="anchor" href="#install"></a>
+<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>The package isn’t on CRAN, but you can install it using <a href="https://cran.r-project.org/package=remotes" class="external-link">remotes</a>.</p>
-<p><code>remotes::install_github("pythonicr/strs")</code></p>
+<p><strong>strs</strong> is an R package that provides a comprehensive set of string manipulation functions, mirroring the functionality and naming conventions of Python’s <code>str</code> methods. This package aims to make string operations in R intuitive and accessible, especially for users familiar with Python. The functions in <strong>strs</strong> leverage the power of the <code>stringi</code> package to ensure efficient and reliable string processing.</p>
 </div>
 <div class="section level2">
-<h2 id="to-do">To do<a class="anchor" aria-label="anchor" href="#to-do"></a>
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<ul>
-<li>Improve the documentation
-<ul>
-<li>If the function is implemented it should do exactly the same thing as the Python equivalent.</li>
-</ul>
-</li>
-<li>Implement public methods
+<p>You can install the <code>strs</code> package directly from GitHub.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Install devtools if you haven't already</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Install strs package from GitHub</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"pythonicr/strs"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="getting-started">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
+</h2>
+<div class="section level3">
+<h3 id="basic-usage">Basic Usage<a class="anchor" aria-label="anchor" href="#basic-usage"></a>
+</h3>
+<p>Here are some examples demonstrating how to use the functions provided by the <strong>strs</strong> package.</p>
+<div class="section level4">
+<h4 id="capitalize-the-first-character-of-each-sentence">Capitalize the First Character of Each Sentence<a class="anchor" aria-label="anchor" href="#capitalize-the-first-character-of-each-sentence"></a>
+</h4>
+<p>The <code>strs_capitalize</code> function capitalizes the first character of each string in a character vector.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/pythonicr/strs" class="external-link">strs</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Capitalize the first character of each sentence</span></span>
+<span><span class="va">capitalized</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_capitalize.html">strs_capitalize</a></span><span class="op">(</span><span class="st">"hello world"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">capitalized</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "Hello world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="perform-case-folding-on-strings">Perform Case Folding on Strings<a class="anchor" aria-label="anchor" href="#perform-case-folding-on-strings"></a>
+</h4>
+<p>The <code>strs_casefold</code> function performs case folding on each element of a character vector, useful for case-insensitive matching.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Perform case folding</span></span>
+<span><span class="va">folded</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_casefold.html">strs_casefold</a></span><span class="op">(</span><span class="st">"HELLO World"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">folded</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="center-a-string-in-a-field-of-a-given-width">Center a String in a Field of a Given Width<a class="anchor" aria-label="anchor" href="#center-a-string-in-a-field-of-a-given-width"></a>
+</h4>
+<p>The <code>strs_center</code> function centers each element of a character vector in a field of a specified width, padding with a specified character.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Center a string with padding</span></span>
+<span><span class="va">centered</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_center.html">strs_center</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">centered</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "  hello   "</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-contains-a-substring">Check if String Contains a Substring<a class="anchor" aria-label="anchor" href="#check-if-string-contains-a-substring"></a>
+</h4>
+<p>The <code>strs_contains</code> function checks whether each element of a character vector contains a specified substring.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings contain a substring</span></span>
+<span><span class="va">contains</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_contains.html">strs_contains</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="st">"world"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">contains</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="count-occurrences-of-a-substring-in-a-string">Count Occurrences of a Substring in a String<a class="anchor" aria-label="anchor" href="#count-occurrences-of-a-substring-in-a-string"></a>
+</h4>
+<p>The <code>strs_count</code> function counts the number of times a specified substring occurs in each element of a character vector.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Count occurrences of a substring</span></span>
+<span><span class="va">count</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_count.html">strs_count</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="st">"o"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">count</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-ends-with-a-specified-suffix">Check if String Ends With a Specified Suffix<a class="anchor" aria-label="anchor" href="#check-if-string-ends-with-a-specified-suffix"></a>
+</h4>
+<p>The <code>strs_endswith</code> function determines whether each element of a character vector ends with a specified suffix.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings end with a suffix</span></span>
+<span><span class="va">endswith</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_endswith.html">strs_endswith</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="st">"world"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">endswith</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="expand-tabs-in-a-string-to-spaces">Expand Tabs in a String to Spaces<a class="anchor" aria-label="anchor" href="#expand-tabs-in-a-string-to-spaces"></a>
+</h4>
+<p>The <code>strs_expandtabs</code> function replaces each tab character (<code>\t</code>) in a string with a specified number of spaces.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Expand tabs to spaces</span></span>
+<span><span class="va">expanded</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_expandtabs.html">strs_expandtabs</a></span><span class="op">(</span><span class="st">"hello\tworld"</span>, <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">expanded</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello    world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="find-the-first-occurrence-of-a-substring-in-a-string">Find the First Occurrence of a Substring in a String<a class="anchor" aria-label="anchor" href="#find-the-first-occurrence-of-a-substring-in-a-string"></a>
+</h4>
+<p>The <code>strs_find</code> function locates the first occurrence of a specified substring within each element of a character vector.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Find the first occurrence of a substring</span></span>
+<span><span class="va">first_occurrence</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_find.html">strs_find</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="st">"world"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">first_occurrence</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 7</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-is-alphanumeric">Check if String is Alphanumeric<a class="anchor" aria-label="anchor" href="#check-if-string-is-alphanumeric"></a>
+</h4>
+<p>The <code>strs_isalnum</code> function checks whether each element of a character vector is alphanumeric.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are alphanumeric</span></span>
+<span><span class="va">isalnum</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_isalnum.html">strs_isalnum</a></span><span class="op">(</span><span class="st">"hello123"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">isalnum</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-contains-only-alphabetical-characters">Check if String Contains Only Alphabetical Characters<a class="anchor" aria-label="anchor" href="#check-if-string-contains-only-alphabetical-characters"></a>
+</h4>
+<p>The <code>strs_isalpha</code> function checks whether each element of a character vector contains only alphabetical characters.</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are alphabetical</span></span>
+<span><span class="va">isalpha</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_isalpha.html">strs_isalpha</a></span><span class="op">(</span><span class="st">"hello"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">isalpha</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-contains-only-ascii-characters">Check if String Contains Only ASCII Characters<a class="anchor" aria-label="anchor" href="#check-if-string-contains-only-ascii-characters"></a>
+</h4>
+<p>The <code>strs_isascii</code> function determines whether each element of a character vector contains only ASCII characters.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are ASCII</span></span>
+<span><span class="va">isascii</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_isascii.html">strs_isascii</a></span><span class="op">(</span><span class="st">"hello"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">isascii</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-contains-only-decimal-characters">Check if String Contains Only Decimal Characters<a class="anchor" aria-label="anchor" href="#check-if-string-contains-only-decimal-characters"></a>
+</h4>
+<p>The <code>strs_isdecimal</code> function checks whether each element of a character vector contains only decimal characters.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are decimal</span></span>
+<span><span class="va">isdecimal</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_isdecimal.html">strs_isdecimal</a></span><span class="op">(</span><span class="st">"12345"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">isdecimal</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-contains-only-digits">Check if String Contains Only Digits<a class="anchor" aria-label="anchor" href="#check-if-string-contains-only-digits"></a>
+</h4>
+<p>The <code>strs_isdigit</code> function checks whether each element of a character vector contains only digits.</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are digits</span></span>
+<span><span class="va">isdigit</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_isdigit.html">strs_isdigit</a></span><span class="op">(</span><span class="st">"12345"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">isdigit</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-is-in-lowercase">Check if String is in Lowercase<a class="anchor" aria-label="anchor" href="#check-if-string-is-in-lowercase"></a>
+</h4>
+<p>The <code>strs_islower</code> function checks whether each element of a character vector is in lowercase.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are lowercase</span></span>
+<span><span class="va">islower</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_islower.html">strs_islower</a></span><span class="op">(</span><span class="st">"hello"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">islower</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-contains-only-numeric-characters">Check if String Contains Only Numeric Characters<a class="anchor" aria-label="anchor" href="#check-if-string-contains-only-numeric-characters"></a>
+</h4>
+<p>The <code>strs_isnumeric</code> function checks whether each element of a character vector contains only numeric characters.</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are numeric</span></span>
+<span><span class="va">isnumeric</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_isnumeric.html">strs_isnumeric</a></span><span class="op">(</span><span class="st">"12345"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">isnumeric</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-contains-only-whitespace-characters">Check if String Contains Only Whitespace Characters<a class="anchor" aria-label="anchor" href="#check-if-string-contains-only-whitespace-characters"></a>
+</h4>
+<p>The <code>strs_isspace</code> function checks whether each element of a character vector contains only whitespace characters.</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are whitespace</span></span>
+<span><span class="va">isspace</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_isspace.html">strs_isspace</a></span><span class="op">(</span><span class="st">"    "</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">isspace</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-is-in-title-case">Check if String is in Title Case<a class="anchor" aria-label="anchor" href="#check-if-string-is-in-title-case"></a>
+</h4>
+<p>The <code>strs_istitle</code> function checks whether each element of a character vector is title case.</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are title case</span></span>
+<span><span class="va">istitle</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_istitle.html">strs_istitle</a></span><span class="op">(</span><span class="st">"This Is Title Case"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">istitle</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-is-in-uppercase">Check if String is in Uppercase<a class="anchor" aria-label="anchor" href="#check-if-string-is-in-uppercase"></a>
+</h4>
+<p>The <code>strs_isupper</code> function checks whether each element of a character vector is in uppercase.</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings are uppercase</span></span>
+<span><span class="va">isupper</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_isupper.html">strs_isupper</a></span><span class="op">(</span><span class="st">"HELLO"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">isupper</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="join-elements-into-a-single-string-with-a-separator">Join Elements into a Single String with a Separator<a class="anchor" aria-label="anchor" href="#join-elements-into-a-single-string-with-a-separator"></a>
+</h4>
+<p>The <code>strs_join</code> function concatenates elements of an iterable using a separator.</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Join elements with a separator</span></span>
+<span><span class="va">joined</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_join.html">strs_join</a></span><span class="op">(</span><span class="st">"-"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">joined</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello-world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="left-justify-string-in-a-field-of-a-given-width">Left-justify String in a Field of a Given Width<a class="anchor" aria-label="anchor" href="#left-justify-string-in-a-field-of-a-given-width"></a>
+</h4>
+<p>The <code>strs_ljust</code> function left-justifies each element of a character vector in a field of a specified width.</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Left-justify a string</span></span>
+<span><span class="va">ljust</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_ljust.html">strs_ljust</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">ljust</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "     hello"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="convert-string-to-lowercase">Convert String to Lowercase<a class="anchor" aria-label="anchor" href="#convert-string-to-lowercase"></a>
+</h4>
+<p>The <code>strs_lower</code> function converts each element of a character vector to lowercase, based on the specified locale.</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Convert strings to lowercase</span></span>
+<span><span class="va">lower</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_lower.html">strs_lower</a></span><span class="op">(</span><span class="st">"HELLO WORLD"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">lower</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="left-strip-characters-from-a-string">Left Strip Characters from a String<a class="anchor" aria-label="anchor" href="#left-strip-characters-from-a-string"></a>
+</h4>
+<p>The <code>strs_lstrip</code> function removes leading characters (spaces by default) from each element of a character vector.</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Left-strip characters</span></span>
+<span><span class="va">lstrip</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_lstrip.html">strs_lstrip</a></span><span class="op">(</span><span class="st">"    hello world"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">lstrip</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="normalize-whitespace-in-a-string">Normalize Whitespace in a String<a class="anchor" aria-label="anchor" href="#normalize-whitespace-in-a-string"></a>
+</h4>
+<p>The <code>strs_normalize_whitespace</code> function normalizes the whitespace in each element of a character vector.</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Normalize whitespace</span></span>
+<span><span class="va">normalized</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_normalize_whitespace.html">strs_normalize_whitespace</a></span><span class="op">(</span><span class="st">"  hello   world  "</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">normalized</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="remove-a-prefix-from-a-string">Remove a Prefix from a String<a class="anchor" aria-label="anchor" href="#remove-a-prefix-from-a-string"></a>
+</h4>
+<p>The <code>strs_removeprefix</code> function removes a specified prefix from the start of each element of a character vector.</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Remove a prefix</span></span>
+<span><span class="va">removed_prefix</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_removeprefix.html">strs_removeprefix</a></span><span class="op">(</span><span class="st">"testString"</span>, <span class="st">"test"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">removed_prefix</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "String"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="remove-a-suffix-from-a-string">Remove a Suffix from a String<a class="anchor" aria-label="anchor" href="#remove-a-suffix-from-a-string"></a>
+</h4>
+<p>The <code>strs_removesuffix</code> function removes a specified suffix from the end of each element of a character vector.</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Remove a suffix</span></span>
+<span><span class="va">removed_suffix</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_removesuffix.html">strs_removesuffix</a></span><span class="op">(</span><span class="st">"StringTest"</span>, <span class="st">"Test"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">removed_suffix</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "String"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="replace-substring-in-a-string">Replace Substring in a String<a class="anchor" aria-label="anchor" href="#replace-substring-in-a-string"></a>
+</h4>
+<p>The <code>strs_replace</code> function replaces all occurrences of a specified substring in each element of a character vector.</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Replace a substring</span></span>
+<span><span class="va">replaced</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_replace.html">strs_replace</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="st">"world"</span>, <span class="st">"there"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">replaced</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello there"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="find-the-last-occurrence-of-a-substring-in-a-string">Find the Last Occurrence of a Substring in a String<a class="anchor" aria-label="anchor" href="#find-the-last-occurrence-of-a-substring-in-a-string"></a>
+</h4>
+<p>The <code>strs_rfind</code> function locates the last occurrence of a specified substring within each element of a character vector.</p>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Find the last occurrence of a substring</span></span>
+<span><span class="va">last_occurrence</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_rfind.html">strs_rfind</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="st">"o"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">last_occurrence</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 8</span></span>
+<span></span>
+<span> <span class="co"># 8</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="right-justify-string-in-a-field-of-a-given-width">Right-justify String in a Field of a Given Width<a class="anchor" aria-label="anchor" href="#right-justify-string-in-a-field-of-a-given-width"></a>
+</h4>
+<p>The <code>strs_rjust</code> function right-justifies each element of a character vector in a field of a specified width.</p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Right-justify a string</span></span>
+<span><span class="va">rjust</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_rjust.html">strs_rjust</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">rjust</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello     "</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="right-strip-characters-from-a-string">Right Strip Characters from a String<a class="anchor" aria-label="anchor" href="#right-strip-characters-from-a-string"></a>
+</h4>
+<p>The <code>strs_rstrip</code> function removes trailing characters (spaces by default) from each element of a character vector.</p>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Right-strip characters</span></span>
+<span><span class="va">rstrip</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_rstrip.html">strs_rstrip</a></span><span class="op">(</span><span class="st">"hello world    "</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">rstrip</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="slice-substrings-from-a-string">Slice Substrings from a String<a class="anchor" aria-label="anchor" href="#slice-substrings-from-a-string"></a>
+</h4>
+<p>The <code>strs_slice</code> function extracts substrings from each element of a character vector, specified by start and stop positions.</p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Slice substrings</span></span>
+<span><span class="va">sliced</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_slice.html">strs_slice</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">sliced</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="split-string-into-substrings">Split String into Substrings<a class="anchor" aria-label="anchor" href="#split-string-into-substrings"></a>
+</h4>
+<p>The <code>strs_split</code> function splits each element of a character vector into substrings based on a separator.</p>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Split strings into substrings</span></span>
+<span><span class="va">split</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_split.html">strs_split</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="st">" "</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">split</span><span class="op">)</span>  <span class="co"># list("hello", "world")</span></span>
+<span><span class="co">#&gt; [[1]]</span></span>
+<span><span class="co">#&gt; [1] "hello" "world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="split-string-into-lines">Split String into Lines<a class="anchor" aria-label="anchor" href="#split-string-into-lines"></a>
+</h4>
+<p>The <code>strs_splitlines</code> function splits each element of a character vector into separate lines.</p>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Split strings into lines</span></span>
+<span><span class="va">split_lines</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_splitlines.html">strs_splitlines</a></span><span class="op">(</span><span class="st">"hello\nworld\n"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">split_lines</span><span class="op">)</span>  <span class="co"># list("hello", "world")</span></span>
+<span><span class="co">#&gt; [[1]]</span></span>
+<span><span class="co">#&gt; [1] "hello" "world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="check-if-string-starts-with-a-specified-prefix">Check if String Starts With a Specified Prefix<a class="anchor" aria-label="anchor" href="#check-if-string-starts-with-a-specified-prefix"></a>
+</h4>
+<p>The <code>strs_startswith</code> function determines whether each element of a character vector starts with a specified prefix.</p>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if strings start with a prefix</span></span>
+<span><span class="va">startswith</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_startswith.html">strs_startswith</a></span><span class="op">(</span><span class="st">"hello world"</span>, <span class="st">"hello"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">startswith</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="strip-characters-from-both-ends-of-a-string">Strip Characters from Both Ends of a String<a class="anchor" aria-label="anchor" href="#strip-characters-from-both-ends-of-a-string"></a>
+</h4>
+<p>The <code>strs_strip</code> function removes leading and trailing characters (spaces by default) from each element of a character vector.</p>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Strip characters from both ends</span></span>
+<span><span class="va">strip</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_strip.html">strs_strip</a></span><span class="op">(</span><span class="st">"    hello world    "</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">strip</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "hello world"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="convert-string-to-title-case">Convert String to Title Case<a class="anchor" aria-label="anchor" href="#convert-string-to-title-case"></a>
+</h4>
+<p>The <code>strs_title</code> function converts each element of a character vector to title case, based on the specified locale.</p>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Convert strings to title case</span></span>
+<span><span class="va">title</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_title.html">strs_title</a></span><span class="op">(</span><span class="st">"hello world"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">title</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "Hello World"</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="convert-string-to-uppercase">Convert String to Uppercase<a class="anchor" aria-label="anchor" href="#convert-string-to-uppercase"></a>
+</h4>
+<p>The <code>strs_upper</code> function converts each element of a character vector to uppercase, based on the specified locale.</p>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Convert strings to uppercase</span></span>
+<span><span class="va">upper</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/strs_upper.html">strs_upper</a></span><span class="op">(</span><span class="st">"hello world"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">upper</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "HELLO WORLD"</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
+</h2>
+<p>We welcome contributions to the <strong>strs</strong> package. If you have suggestions, bug reports, or want to contribute code, please open an issue or submit a pull request on our GitHub repository.</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked>capitalize</label></li>
 <li><label><input type="checkbox" checked>casefold</label></li>
@@ -157,31 +535,11 @@
 <li><label><input type="checkbox" checked>upper</label></li>
 <li><label><input type="checkbox">zfill</label></li>
 </ul>
-</li>
-<li>Implement dunder methods
-<ul class="task-list">
-<li><label><input type="checkbox" checked>contains</label></li>
-<li><label><input type="checkbox">add</label></li>
-<li><label><input type="checkbox">mul</label></li>
-</ul>
-</li>
-</ul>
 </div>
 <div class="section level2">
-<h2 id="additional-methods">Additional methods<a class="anchor" aria-label="anchor" href="#additional-methods"></a>
+<h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
 </h2>
-<ul>
-<li>normalize_whitespace</li>
-<li>wrap</li>
-</ul>
-</div>
-<div class="section level2">
-<h2 id="links">Links<a class="anchor" aria-label="anchor" href="#links"></a>
-</h2>
-<ul>
-<li><a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="external-link">Python string methods</a></li>
-<li><a href="https://stringi.gagolewski.com/weave/basic_operations.html" class="external-link">Basic stringi</a></li>
-</ul>
+<p><strong>strs</strong> is released under the MIT License. See the LICENSE file in the package’s repository for more details.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
