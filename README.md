@@ -7,10 +7,10 @@
 
 **strs** is an R package that provides a comprehensive set of string
 manipulation functions, mirroring the functionality and naming
-conventions of Python’s `str` methods. This package aims to make string
-operations in R intuitive and accessible, especially for users familiar
-with Python. The functions in **strs** leverage the power of the
-`stringi` package to ensure efficient and reliable string processing.
+conventions of Python’s `str` methods. It aims to make string operations
+in R more accessible for users familiar with Python. Under the hood,
+every function uses the `stringi` package to ensure the results are
+consistent.
 
 ## Installation
 
@@ -517,7 +517,7 @@ issue or submit a pull request on our GitHub repository.
 - [x] splitlines
 - [x] startswith
 - [x] strip
-- [ ] swapcase
+- [x] swapcase
 - [x] title
 - [ ] translate
 - [x] upper
