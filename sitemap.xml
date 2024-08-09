@@ -1,129 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://pythonicr.github.io/strs/404.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_capitalize.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_casefold.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_center.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_contains.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_count.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_endswith.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_expandtabs.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_find.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_isalnum.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_isalpha.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_isascii.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_isdecimal.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_isdigit.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_islower.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_isnumeric.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_isspace.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_istitle.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_isupper.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_join.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_ljust.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_lower.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_lstrip.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_normalize_whitespace.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_removeprefix.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_removesuffix.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_replace.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_rfind.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_rjust.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_rstrip.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_slice.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_split.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_splitlines.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_startswith.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_strip.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_title.html</loc>
-  </url>
-  <url>
-    <loc>https://pythonicr.github.io/strs/reference/strs_upper.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://pythonicr.github.io/strs/404.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/LICENSE-text.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/LICENSE.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/authors.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/index.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/index.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_capitalize.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_casefold.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_center.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_contains.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_count.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_endswith.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_expandtabs.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_find.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_isalnum.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_isalpha.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_isascii.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_isdecimal.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_isdigit.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_islower.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_isnumeric.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_isspace.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_istitle.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_isupper.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_join.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_ljust.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_lower.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_lstrip.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_normalize_whitespace.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_removeprefix.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_removesuffix.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_replace.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_rfind.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_rjust.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_rstrip.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_slice.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_split.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_splitlines.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_startswith.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_strip.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_swapcase.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_title.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_upper.html</loc></url>
 </urlset>
+
