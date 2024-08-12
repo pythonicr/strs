@@ -1,4 +1,4 @@
-#' Check if String is Alphanumeric
+#' Check if string is alphanumeric
 #'
 #' `strs_isalnum` checks whether each element of a character vector is
 #' alphanumeric. This means that the function tests if all characters in the

@@ -1,4 +1,4 @@
-#' Find the First Occurrence of a Substring in a String
+#' Find the first occurrence of a substring in a string
 #'
 #' `strs_find` locates the first occurrence of a specified substring within each
 #' element of a character vector. This function is analogous to Python's

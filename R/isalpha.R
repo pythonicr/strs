@@ -1,4 +1,4 @@
-#' Check if String Contains Only Alphabetical Characters
+#' Check if string contains only alphabetical characters
 #'
 #' `strs_isalpha` checks whether each element of a character vector contains
 #' only alphabetical characters. It is similar to Python's `str.isalpha()`

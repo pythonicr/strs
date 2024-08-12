@@ -1,4 +1,4 @@
-#' Swap Uppercase and Lowercase Characters in a String
+#' Swap uppercase and lowercase characters in a string
 #'
 #' `strs_swapcase` returns a copy of the string with uppercase characters convert
 #' to lowercase and visa-versa. It is similar to Python's `str.swapcase()`.

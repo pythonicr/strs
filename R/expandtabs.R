@@ -1,4 +1,4 @@
-#' Expand Tabs in a String to Spaces
+#' Expand tabs in a string to spaces
 #'
 #' `strs_expandtabs` replaces each tab character (`\\t`) in a string with a
 #' specified number of spaces. This function behaves similarly to Python's

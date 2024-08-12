@@ -1,4 +1,4 @@
-#' Right-justify String in a Field of a Given Width
+#' Right-justify string in a field of a given width
 #'
 #' `strs_rjust` right-justifies each element of a character vector in a field of
 #' a specified width. It is similar to Python's `str.rjust()` method.

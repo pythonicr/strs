@@ -1,4 +1,4 @@
-#' Check if String Ends With a Specified Suffix
+#' Check if string ends with a specified suffix
 #'
 #' `strs_endswith` determines whether each element of a character vector ends
 #' with a specified suffix. This function is similar to Python's

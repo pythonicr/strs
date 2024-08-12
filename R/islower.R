@@ -1,4 +1,4 @@
-#' Check if String is in Lowercase
+#' Check if string is in lowercase
 #'
 #' `strs_islower` checks whether each element of a character vector is in
 #' lowercase. It is similar to Python's `str.islower()` method.

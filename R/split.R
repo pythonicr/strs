@@ -1,4 +1,4 @@
-#' Split String into Substrings
+#' Split string into substrings
 #'
 #' `strs_split` splits each element of a character vector into substrings based
 #' on a separator. It is similar to Python's `str.split()` method.

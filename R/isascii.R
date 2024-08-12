@@ -1,4 +1,4 @@
-#' Check if String Contains Only ASCII Characters
+#' Check if string contains only ascii characters
 #'
 #' `strs_isascii` determines whether each element of a character vector contains
 #' only ASCII characters. It is similar to Python's `str.isascii()` method.

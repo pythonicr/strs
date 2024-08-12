@@ -1,4 +1,4 @@
-#' Check if String Contains Only Whitespace Characters
+#' Check if string contains only whitespace characters
 #'
 #' `strs_isspace` checks whether each element of a character vector contains
 #' only whitespace characters. It is similar to Python's `str.isspace()` method.

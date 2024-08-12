@@ -1,4 +1,4 @@
-#' Convert String to Title Case
+#' Convert string to title case
 #'
 #' `strs_title` converts each element of a character vector to title case, based
 #' on the specified locale. It is similar to Python's `str.title()` method.

@@ -1,4 +1,4 @@
-#' Strip Characters from Both Ends of a String
+#' Strip characters from both ends of a string
 #'
 #' `strs_strip` removes leading and trailing characters (spaces by default) from
 #' each element of a character vector. It is similar to Python's `str.strip()`

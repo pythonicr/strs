@@ -1,4 +1,4 @@
-#' Slice Substrings from a String
+#' Slice substrings from a string
 #'
 #' `strs_slice` extracts substrings from each element of a character vector,
 #' specified by start and stop positions. It is similar to Python's slicing

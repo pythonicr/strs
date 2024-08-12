@@ -1,4 +1,4 @@
-#' Split String into Lines
+#' Split string into lines
 #'
 #' `strs_splitlines` splits each element of a character vector into separate
 #' lines. It is similar to Python's `str.splitlines()` method.

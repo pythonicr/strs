@@ -1,4 +1,4 @@
-#' Join Elements into a Single String with a Separator
+#' Join elements into a single string with a separator
 #'
 #' `strs_join` concatenates elements of `iterable` using `sep`. It is similar to
 #' Python's `str.join()`.

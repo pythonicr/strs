@@ -1,4 +1,4 @@
-#' Check if String Starts With a Specified Prefix
+#' Check if string starts with a specified prefix
 #'
 #' `strs_startswith` determines whether each element of a character vector
 #' starts with a specified prefix. It is similar to Python's `str.startswith()`

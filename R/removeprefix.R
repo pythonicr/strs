@@ -1,4 +1,4 @@
-#' Remove a Prefix from a String
+#' Remove a prefix from a string
 #'
 #' `strs_removeprefix` removes a specified prefix from the start of each element
 #' of a character vector. It is similar to Python's `str.removeprefix()` method.

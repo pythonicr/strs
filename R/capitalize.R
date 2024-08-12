@@ -1,4 +1,4 @@
-#' Capitalize the First Character of Each Sentence
+#' Capitalize the first character of each sentence
 #'
 #' This function capitalizes the first character of each string in a given
 #' string, based on the specified locale. This is similar to Python's

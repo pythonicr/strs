@@ -1,4 +1,4 @@
-#' Left Strip Characters from a String
+#' Left strip characters from a string
 #'
 #' `strs_lstrip` removes leading characters (spaces by default) from each
 #' element of a character vector. It is similar to Python's `str.lstrip()`

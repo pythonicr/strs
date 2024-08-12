@@ -1,4 +1,4 @@
-#' Convert String to Lowercase
+#' Convert string to lowercase
 #'
 #' `strs_lower` converts each element of a character vector to lowercase, based
 #' on the specified locale. It is similar to Python's `str.lower()` method.

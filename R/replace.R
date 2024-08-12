@@ -1,4 +1,4 @@
-#' Replace Substring in a String
+#' Replace substring in a string
 #'
 #' `strs_replace` replaces all occurrences of a specified substring in each
 #' element of a character vector. It is similar to Python's `str.replace()`

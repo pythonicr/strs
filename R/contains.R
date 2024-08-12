@@ -1,4 +1,4 @@
-#' Check if String Contains a Substring
+#' Check if string contains a substring
 #'
 #' `strs_contains` checks whether each element of a character vector contains a
 #' specified substring. This function mirrors the functionality of Python's

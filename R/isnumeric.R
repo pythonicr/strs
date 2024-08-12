@@ -1,4 +1,4 @@
-#' Check if String Contains Only Numeric Characters
+#' Check if string contains only numeric characters
 #'
 #' `strs_isnumeric` checks whether each element of a character vector contains
 #' only numeric characters. It is similar to Python's `str.isnumeric()` method.

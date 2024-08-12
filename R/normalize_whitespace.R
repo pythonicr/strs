@@ -1,4 +1,4 @@
-#' Normalize Whitespace in a String
+#' Normalize whitespace in a string
 #'
 #' `strs_normalize_whitespace` normalizes the whitespace in each element of a
 #' character vector. It trims leading and trailing whitespace and replaces any

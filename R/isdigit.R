@@ -1,4 +1,4 @@
-#' Check if String Contains Only Digits
+#' Check if string contains only digits
 #'
 #' `strs_isdigit` checks whether each element of a character vector contains
 #' only digits. It is similar to Python's `str.isdigit()` method.

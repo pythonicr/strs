@@ -1,4 +1,4 @@
-#' Perform Case Folding on Strings
+#' Perform case folding on strings
 #'
 #' `strs_casefold` is used to perform case folding on each element of a
 #' character vector. This function is particularly useful for case-insensitive

@@ -1,4 +1,4 @@
-#' Count Occurrences of a Substring in a String
+#' Count occurrences of a substring in a string
 #'
 #' `strs_count` counts the number of times a specified substring occurs in each
 #' element of a character vector. Optionally, the search can be limited to a

@@ -1,4 +1,4 @@
-#' Check if String is in Title Case
+#' Check if string is in title case
 #'
 #' `strs_istitle` checks whether each element of a character vector is title
 #' case. This is similar to Python's `str.istitle` method.

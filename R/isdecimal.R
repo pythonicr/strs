@@ -1,4 +1,4 @@
-#' Check if String Contains Only Decimal Characters
+#' Check if string contains only decimal characters
 #'
 #' `strs_isdecimal` checks whether each element of a character vector contains
 #' only decimal characters. It is similar to Python's `str.isdecimal()` method.

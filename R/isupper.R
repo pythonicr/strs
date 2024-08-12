@@ -1,4 +1,4 @@
-#' Check if String is in Uppercase
+#' Check if string is in uppercase
 #'
 #' `strs_isupper` checks whether each element of a character vector is in
 #' uppercase. It is similar to Python's `str.isupper()` method.

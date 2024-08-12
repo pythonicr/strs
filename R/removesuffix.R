@@ -1,4 +1,4 @@
-#' Remove a Suffix from a String
+#' Remove a suffix from a string
 #'
 #' `strs_removesuffix` removes a specified suffix from the end of each element
 #' of a character vector. It is similar to Python's `str.removesuffix()` method.

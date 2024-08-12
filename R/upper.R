@@ -1,4 +1,4 @@
-#' Convert String to Uppercase
+#' Convert string to uppercase
 #'
 #' `strs_upper` converts each element of a character vector to uppercase, based
 #' on the specified locale. It is similar to Python's `str.upper()` method.

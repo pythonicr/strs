@@ -1,4 +1,4 @@
-#' Find the Last Occurrence of a Substring in a String
+#' Find the last occurrence of a substring in a string
 #'
 #' `strs_rfind` locates the last occurrence of a specified substring within each
 #' element of a character vector. It is similar to Python's `str.rfind()`

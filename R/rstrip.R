@@ -1,4 +1,4 @@
-#' Right Strip Characters from a String
+#' Right strip characters from a string
 #'
 #' `strs_rstrip` removes trailing characters (spaces by default) from each
 #' element of a character vector. It is similar to Python's `str.rstrip()`

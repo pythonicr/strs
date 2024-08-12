@@ -1,4 +1,4 @@
-#' Left-justify String in a Field of a Given Width
+#' Left-justify string in a field of a given width
 #'
 #' `strs_ljust` left-justifies each element of a character vector in a field of
 #' a specified width. It is similar to Python's `str.ljust()` method.

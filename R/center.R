@@ -1,4 +1,4 @@
-#' Center a String in a Field of a Given Width
+#' Center a string in a field of a given width
 #'
 #' `strs_center` centers each element of a character vector in a field of a
 #' specified width. It pads the string on both sides with a specified character
