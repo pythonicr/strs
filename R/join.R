@@ -12,7 +12,5 @@
 #' @seealso [Python str.join() documentation](https://docs.python.org/3/library/stdtypes.html#str.join)
 #' @export
 strs_join <- function(sep, iterable) {
-  checkmate::qassert(sep, "S1")
-  checkmate::qassert(iterable, "S")
-  stringi::stri_join(iterable, collapse = sep)
+  stringi::stri_flatten(iterable, collapse = sep)
 }
