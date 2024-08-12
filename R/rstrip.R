@@ -16,5 +16,10 @@
 #' @seealso [Python str.rstrip() documentation](https://docs.python.org/3/library/stdtypes.html#str.rstrip)
 #' @export
 strs_rstrip <- function(string, chars = NULL) {
-  .str_strip(string, side = "right", chars = chars)
+  if (is.null(chars)) {
+    return(stringi::stri_trim_right(string))
+  }
+  chars <- stringi::stri_flatten(chars)
+  pattern <- stringi::stri_join("[", chars, "]+$")
+  stringi::stri_replace_all_regex(string, pattern, "")
 }
