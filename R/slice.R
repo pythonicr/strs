@@ -9,6 +9,7 @@
 #' @param stop An integerish scalar for the ending position for slicing (inclusive).
 #' @param step An integer greater than 0 or equal to -1 for the step size. If -1 is provided,
 #' each string will be reversed after slicing operations.
+#' @param ... Used to force keyword argument usage of `step`.
 #' @return A character vector of the same length as `string`, with each element
 #' being the sliced substring.
 #' @examples

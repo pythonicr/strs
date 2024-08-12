@@ -13,6 +13,8 @@ strs_slice(string, start = 1L, stop = -1L, ..., step = 1L)
 
 \item{stop}{An integerish scalar for the ending position for slicing (inclusive).}
 
+\item{...}{Used to force keyword argument usage of \code{step}.}
+
 \item{step}{An integer greater than 0 or equal to -1 for the step size. If -1 is provided,
 each string will be reversed after slicing operations.}
 }
