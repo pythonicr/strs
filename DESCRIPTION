@@ -1,10 +1,10 @@
 Package: strs
 Title: Python-ish String Functions in R
-Version: 0.0.2
+Version: 0.1.0
 Authors@R: 
     person("Garrett", "Shipley", , "garrett.shipley7@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           comment = c(ORCID = "0000-0002-0444-0367"))
+Description: String manipulation functions with the same arguments and behavior as those available in Python.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
