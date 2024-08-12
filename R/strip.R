@@ -16,5 +16,10 @@
 #' @seealso [Python str.strip() documentation](https://docs.python.org/3/library/stdtypes.html#str.strip)
 #' @export
 strs_strip <- function(string, chars = NULL) {
-  .str_strip(string, side = "both", chars = chars)
+  if (is.null(chars)) {
+    return(stringi::stri_trim_both(string))
+  }
+  chars <- stringi::stri_flatten(chars)
+  pattern <- stringi::stri_join("^[", chars, "]+|[", chars, "]+$")
+  stringi::stri_replace_all_regex(string, pattern, "")
 }
