@@ -2,7 +2,7 @@
 % Please edit documentation in R/normalize_whitespace.R
 \name{strs_normalize_whitespace}
 \alias{strs_normalize_whitespace}
-\title{Normalize Whitespace in a String}
+\title{Normalize whitespace in a string}
 \usage{
 strs_normalize_whitespace(string)
 }

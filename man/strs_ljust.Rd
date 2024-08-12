@@ -2,7 +2,7 @@
 % Please edit documentation in R/ljust.R
 \name{strs_ljust}
 \alias{strs_ljust}
-\title{Left-justify String in a Field of a Given Width}
+\title{Left-justify string in a field of a given width}
 \usage{
 strs_ljust(string, width, fillchar = " ")
 }

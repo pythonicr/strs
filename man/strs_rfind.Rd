@@ -2,7 +2,7 @@
 % Please edit documentation in R/rfind.R
 \name{strs_rfind}
 \alias{strs_rfind}
-\title{Find the Last Occurrence of a Substring in a String}
+\title{Find the last occurrence of a substring in a string}
 \usage{
 strs_rfind(string, substring)
 }

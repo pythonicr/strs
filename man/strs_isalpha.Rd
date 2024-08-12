@@ -2,7 +2,7 @@
 % Please edit documentation in R/isalpha.R
 \name{strs_isalpha}
 \alias{strs_isalpha}
-\title{Check if String Contains Only Alphabetical Characters}
+\title{Check if string contains only alphabetical characters}
 \usage{
 strs_isalpha(string)
 }

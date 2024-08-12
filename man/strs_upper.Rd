@@ -2,7 +2,7 @@
 % Please edit documentation in R/upper.R
 \name{strs_upper}
 \alias{strs_upper}
-\title{Convert String to Uppercase}
+\title{Convert string to uppercase}
 \usage{
 strs_upper(string, locale = "en")
 }

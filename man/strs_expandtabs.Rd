@@ -2,7 +2,7 @@
 % Please edit documentation in R/expandtabs.R
 \name{strs_expandtabs}
 \alias{strs_expandtabs}
-\title{Expand Tabs in a String to Spaces}
+\title{Expand tabs in a string to spaces}
 \usage{
 strs_expandtabs(string, tabsize = 8)
 }

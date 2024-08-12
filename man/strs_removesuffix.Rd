@@ -2,7 +2,7 @@
 % Please edit documentation in R/removesuffix.R
 \name{strs_removesuffix}
 \alias{strs_removesuffix}
-\title{Remove a Suffix from a String}
+\title{Remove a suffix from a string}
 \usage{
 strs_removesuffix(string, suffix)
 }

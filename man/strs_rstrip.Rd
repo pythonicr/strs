@@ -2,7 +2,7 @@
 % Please edit documentation in R/rstrip.R
 \name{strs_rstrip}
 \alias{strs_rstrip}
-\title{Right Strip Characters from a String}
+\title{Right strip characters from a string}
 \usage{
 strs_rstrip(string, chars = NULL)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/find.R
 \name{strs_find}
 \alias{strs_find}
-\title{Find the First Occurrence of a Substring in a String}
+\title{Find the first occurrence of a substring in a string}
 \usage{
 strs_find(string, substring)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/isnumeric.R
 \name{strs_isnumeric}
 \alias{strs_isnumeric}
-\title{Check if String Contains Only Numeric Characters}
+\title{Check if string contains only numeric characters}
 \usage{
 strs_isnumeric(string)
 }

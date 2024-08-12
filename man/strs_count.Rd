@@ -2,7 +2,7 @@
 % Please edit documentation in R/count.R
 \name{strs_count}
 \alias{strs_count}
-\title{Count Occurrences of a Substring in a String}
+\title{Count occurrences of a substring in a string}
 \usage{
 strs_count(string, substring, start = 1L, end = -1L)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/isdigit.R
 \name{strs_isdigit}
 \alias{strs_isdigit}
-\title{Check if String Contains Only Digits}
+\title{Check if string contains only digits}
 \usage{
 strs_isdigit(string)
 }

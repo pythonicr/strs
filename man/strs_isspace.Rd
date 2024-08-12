@@ -2,7 +2,7 @@
 % Please edit documentation in R/isspace.R
 \name{strs_isspace}
 \alias{strs_isspace}
-\title{Check if String Contains Only Whitespace Characters}
+\title{Check if string contains only whitespace characters}
 \usage{
 strs_isspace(string)
 }

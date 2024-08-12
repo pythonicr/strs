@@ -2,7 +2,7 @@
 % Please edit documentation in R/capitalize.R
 \name{strs_capitalize}
 \alias{strs_capitalize}
-\title{Capitalize the First Character of Each Sentence}
+\title{Capitalize the first character of each sentence}
 \usage{
 strs_capitalize(string, locale = "en")
 }

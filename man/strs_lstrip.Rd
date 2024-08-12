@@ -2,7 +2,7 @@
 % Please edit documentation in R/lstrip.R
 \name{strs_lstrip}
 \alias{strs_lstrip}
-\title{Left Strip Characters from a String}
+\title{Left strip characters from a string}
 \usage{
 strs_lstrip(string, chars = NULL)
 }

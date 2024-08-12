@@ -2,7 +2,7 @@
 % Please edit documentation in R/strip.R
 \name{strs_strip}
 \alias{strs_strip}
-\title{Strip Characters from Both Ends of a String}
+\title{Strip characters from both ends of a string}
 \usage{
 strs_strip(string, chars = NULL)
 }

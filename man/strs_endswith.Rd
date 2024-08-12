@@ -2,7 +2,7 @@
 % Please edit documentation in R/endswith.R
 \name{strs_endswith}
 \alias{strs_endswith}
-\title{Check if String Ends With a Specified Suffix}
+\title{Check if string ends with a specified suffix}
 \usage{
 strs_endswith(string, suffix)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/swapcase.R
 \name{strs_swapcase}
 \alias{strs_swapcase}
-\title{Swap Uppercase and Lowercase Characters in a String}
+\title{Swap uppercase and lowercase characters in a string}
 \usage{
 strs_swapcase(string)
 }

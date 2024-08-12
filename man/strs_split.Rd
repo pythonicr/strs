@@ -2,7 +2,7 @@
 % Please edit documentation in R/split.R
 \name{strs_split}
 \alias{strs_split}
-\title{Split String into Substrings}
+\title{Split string into substrings}
 \usage{
 strs_split(string, sep = " ", maxsplit = -1L)
 }

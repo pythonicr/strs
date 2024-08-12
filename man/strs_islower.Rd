@@ -2,7 +2,7 @@
 % Please edit documentation in R/islower.R
 \name{strs_islower}
 \alias{strs_islower}
-\title{Check if String is in Lowercase}
+\title{Check if string is in lowercase}
 \usage{
 strs_islower(string)
 }

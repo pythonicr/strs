@@ -2,7 +2,7 @@
 % Please edit documentation in R/splitlines.R
 \name{strs_splitlines}
 \alias{strs_splitlines}
-\title{Split String into Lines}
+\title{Split string into lines}
 \usage{
 strs_splitlines(string, keepends = FALSE)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/istitle.R
 \name{strs_istitle}
 \alias{strs_istitle}
-\title{Check if String is in Title Case}
+\title{Check if string is in title case}
 \usage{
 strs_istitle(string)
 }

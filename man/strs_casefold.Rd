@@ -2,7 +2,7 @@
 % Please edit documentation in R/casefold.R
 \name{strs_casefold}
 \alias{strs_casefold}
-\title{Perform Case Folding on Strings}
+\title{Perform case folding on strings}
 \usage{
 strs_casefold(string)
 }

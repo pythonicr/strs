@@ -2,7 +2,7 @@
 % Please edit documentation in R/join.R
 \name{strs_join}
 \alias{strs_join}
-\title{Join Elements into a Single String with a Separator}
+\title{Join elements into a single string with a separator}
 \usage{
 strs_join(sep, iterable)
 }

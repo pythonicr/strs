@@ -2,7 +2,7 @@
 % Please edit documentation in R/slice.R
 \name{strs_slice}
 \alias{strs_slice}
-\title{Slice Substrings from a String}
+\title{Slice substrings from a string}
 \usage{
 strs_slice(string, start = 1L, stop = -1L)
 }

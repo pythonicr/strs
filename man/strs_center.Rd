@@ -2,7 +2,7 @@
 % Please edit documentation in R/center.R
 \name{strs_center}
 \alias{strs_center}
-\title{Center a String in a Field of a Given Width}
+\title{Center a string in a field of a given width}
 \usage{
 strs_center(string, width, fillchar = " ")
 }

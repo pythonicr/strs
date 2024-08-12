@@ -2,7 +2,7 @@
 % Please edit documentation in R/title.R
 \name{strs_title}
 \alias{strs_title}
-\title{Convert String to Title Case}
+\title{Convert string to title case}
 \usage{
 strs_title(string, locale = "en")
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/isalnum.R
 \name{strs_isalnum}
 \alias{strs_isalnum}
-\title{Check if String is Alphanumeric}
+\title{Check if string is alphanumeric}
 \usage{
 strs_isalnum(string)
 }

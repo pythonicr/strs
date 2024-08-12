@@ -2,7 +2,7 @@
 % Please edit documentation in R/replace.R
 \name{strs_replace}
 \alias{strs_replace}
-\title{Replace Substring in a String}
+\title{Replace substring in a string}
 \usage{
 strs_replace(string, substring, replacement)
 }

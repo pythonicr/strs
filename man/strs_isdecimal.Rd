@@ -2,7 +2,7 @@
 % Please edit documentation in R/isdecimal.R
 \name{strs_isdecimal}
 \alias{strs_isdecimal}
-\title{Check if String Contains Only Decimal Characters}
+\title{Check if string contains only decimal characters}
 \usage{
 strs_isdecimal(string)
 }

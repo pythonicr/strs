@@ -2,7 +2,7 @@
 % Please edit documentation in R/isupper.R
 \name{strs_isupper}
 \alias{strs_isupper}
-\title{Check if String is in Uppercase}
+\title{Check if string is in uppercase}
 \usage{
 strs_isupper(string)
 }

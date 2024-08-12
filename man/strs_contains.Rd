@@ -2,7 +2,7 @@
 % Please edit documentation in R/contains.R
 \name{strs_contains}
 \alias{strs_contains}
-\title{Check if String Contains a Substring}
+\title{Check if string contains a substring}
 \usage{
 strs_contains(string, substring)
 }

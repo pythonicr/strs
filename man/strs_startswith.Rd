@@ -2,7 +2,7 @@
 % Please edit documentation in R/startswith.R
 \name{strs_startswith}
 \alias{strs_startswith}
-\title{Check if String Starts With a Specified Prefix}
+\title{Check if string starts with a specified prefix}
 \usage{
 strs_startswith(string, prefix)
 }

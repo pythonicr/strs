@@ -2,7 +2,7 @@
 % Please edit documentation in R/removeprefix.R
 \name{strs_removeprefix}
 \alias{strs_removeprefix}
-\title{Remove a Prefix from a String}
+\title{Remove a prefix from a string}
 \usage{
 strs_removeprefix(string, prefix)
 }

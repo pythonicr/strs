@@ -2,7 +2,7 @@
 % Please edit documentation in R/lower.R
 \name{strs_lower}
 \alias{strs_lower}
-\title{Convert String to Lowercase}
+\title{Convert string to lowercase}
 \usage{
 strs_lower(string, locale = "en")
 }

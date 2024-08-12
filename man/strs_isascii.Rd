@@ -2,7 +2,7 @@
 % Please edit documentation in R/isascii.R
 \name{strs_isascii}
 \alias{strs_isascii}
-\title{Check if String Contains Only ASCII Characters}
+\title{Check if string contains only ascii characters}
 \usage{
 strs_isascii(string)
 }
