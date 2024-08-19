@@ -27,5 +27,5 @@ strs_find("hello world", "world")
 strs_find("hello world", "x")
 }
 \seealso{
-\href{URL_PLACEHOLDER}{Python str.find() documentation}
+\href{https://docs.python.org/3/library/stdtypes.html#str.find}{Python str.find() documentation}
 }

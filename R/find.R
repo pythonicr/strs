@@ -14,7 +14,7 @@
 #' strs_find("hello world", "world")
 #' strs_find("hello world", "x")
 #' @export
-#' @seealso [Python str.find() documentation](URL_PLACEHOLDER)
+#' @seealso [Python str.find() documentation](https://docs.python.org/3/library/stdtypes.html#str.find)
 strs_find <- function(string, substring) {
   as.integer(stringi::stri_locate_first_fixed(string, substring)[, "start"])
 }
