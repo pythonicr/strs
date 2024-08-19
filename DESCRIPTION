@@ -1,5 +1,5 @@
 Package: strs
-Title: Python-Ish String Functions in R
+Title: Pythonic String Functions in R
 Version: 0.1.0
 Authors@R: 
     person("Garrett", "Shipley", , "garrett.shipley7@gmail.com", role = c("aut", "cre"),
