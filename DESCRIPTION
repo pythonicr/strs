@@ -4,11 +4,11 @@ Version: 0.1.0
 Authors@R: 
     person("Garrett", "Shipley", , "garrett.shipley7@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-0444-0367"))
-Description: A package that offers a comprehensive set of string manipulation function based on those
-    found in 'Python' without relying on 'reticulate'. It provides functions that intend to (1) make
-    it easier for users familiar with 'Python' to work with strings, (2) reduce the complexity often
-    associated with string operations, (3) and enable users to write more readable and maintainable
-    code that manipulates strings.
+Description: A comprehensive set of string manipulation function based on those found in 'Python'
+    without relying on 'reticulate'. It provides functions that intend to (1) make it easier for
+    users familiar with 'Python' to work with strings, (2) reduce the complexity often associated
+    with string operations, (3) and enable users to write more readable and maintainable code
+    that manipulates strings.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
