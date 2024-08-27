@@ -9,7 +9,6 @@ Description: A package that offers a comprehensive set of string manipulation fu
     it easier for users familiar with 'Python' to work with strings, (2) reduce the complexity often 
     associated with string operations, (3) and enable users to write more readable and maintainable 
     code that manipulates strings.
-
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
