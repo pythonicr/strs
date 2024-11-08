@@ -1,6 +1,6 @@
 Package: strs
 Title: 'Python' Style String Functions
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person("Garrett", "Shipley", , "garrett.shipley7@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-0444-0367"))
@@ -12,8 +12,9 @@ Description: A comprehensive set of string manipulation functions based on those
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Imports: 
+    glue,
     stringi
 Suggests: 
     testthat (>= 3.0.0)
