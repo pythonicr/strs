@@ -12,7 +12,9 @@
 <url><loc>https://pythonicr.github.io/strs/reference/strs_count.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_endswith.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_expandtabs.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_f.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_find.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_format.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_isalnum.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_isalpha.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_isascii.html</loc></url>
@@ -24,6 +26,7 @@
 <url><loc>https://pythonicr.github.io/strs/reference/strs_istitle.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_isupper.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_join.html</loc></url>
+<url><loc>https://pythonicr.github.io/strs/reference/strs_len.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_ljust.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_lower.html</loc></url>
 <url><loc>https://pythonicr.github.io/strs/reference/strs_lstrip.html</loc></url>
