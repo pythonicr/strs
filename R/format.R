@@ -5,9 +5,9 @@
 #' @param string A character vector containing the string with placeholders in curly braces `{}`. If the vector contains
 #' more than one string, they are concatenated before interpolation.
 #' @return A character vector with the placeholders replaced by the evaluated expressions.
-#' @details Under the hood, this function uses the `glue::glue()` function to perform the interpolation. However, this
-#' function doesn't let you change the evaluation context or perform any string trimming. If any interpolated expression
-#' is NA, it will be NA in the output. If any interpolated expression is NULL, it will be NULL in the output.
+#' @details Under the hood, this function uses the `glue::glue_data()` function to perform the interpolation. However,
+#' this function doesn't let you change the evaluation context or perform any string trimming. If any interpolated
+#' expression is NA, it will be NA in the output. If any interpolated expression is NULL, it will be NULL in the output.
 #'
 #' @examples
 #' name <- "Alice"
@@ -20,17 +20,27 @@
 #'
 #' @export
 strs_f <- function(string) {
-  do.call(glue::glue, list(
+  .data <- NULL
+  .envir <- parent.frame(n = 1)
+  if (!length(setdiff(names(.envir), c(".SDall", ".N", ".SD", ".NGRP", ".GRP", ".I")))) {
+    # The function is being called within a data.table experession, which requires special handling.
+    # See https://github.com/Rdatatable/data.table/issues/4879, https://github.com/tidyverse/glue/issues/211
+    .data <- parent.frame(n = 3)$x
+  }
+  glue::glue_data(
+    .x = .data,
     string,
     .sep = "",
+    .envir = .envir,
     .open = "{",
     .close = "}",
-    .trim = FALSE,
     .na = "NA",
     .null = "NULL",
-    .transformer = transformer
-  ))
+    .transformer = transformer,
+    .trim = FALSE
+  ) |> as.character()
 }
+
 
 
 #' String Interpolation with Data Support
@@ -59,19 +69,21 @@ strs_f <- function(string) {
 #'
 #' @export
 strs_format <- function(string, ..., .data = NULL) {
-  do.call(glue::glue_data, list(
-    .x = .data,
-    string,
-    ...,
-    .envir = NULL,
-    .sep = "",
-    .open = "{",
-    .close = "}",
-    .trim = FALSE,
-    .na = "NA",
-    .null = "NULL",
-    .transformer = transformer
-  ))
+  do.call(
+    glue::glue_data, list(
+      .x = .data,
+      string,
+      ...,
+      .envir = NULL,
+      .sep = "",
+      .open = "{",
+      .close = "}",
+      .trim = FALSE,
+      .na = "NA",
+      .null = "NULL",
+      .transformer = transformer
+    )
+  ) |> as.character()
 }
 
 
@@ -85,10 +97,7 @@ transformer <- function(text, envir) {
   res <- glue::identity_transformer(expr, envir)
   fmt <- paste0("%", parts[2])
 
-  if (fmt != "%NA") {
-    # format the result
-    res <- stringi::stri_sprintf(fmt, res)
-  }
+  if (fmt != "%NA") res <- stringi::stri_sprintf(fmt, res)
 
   if (parts[1] != expr) {
     # if they aren't equal it's because it once ended with an equal sign

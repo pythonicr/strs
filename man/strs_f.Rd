@@ -17,9 +17,9 @@ A character vector with the placeholders replaced by the evaluated expressions.
 The \code{strs_f} function allows for inline variable interpolation in strings, similar to Python's f-strings.
 }
 \details{
-Under the hood, this function uses the \code{glue::glue()} function to perform the interpolation. However, this
-function doesn't let you change the evaluation context or perform any string trimming. If any interpolated expression
-is NA, it will be NA in the output. If any interpolated expression is NULL, it will be NULL in the output.
+Under the hood, this function uses the \code{glue::glue_data()} function to perform the interpolation. However,
+this function doesn't let you change the evaluation context or perform any string trimming. If any interpolated
+expression is NA, it will be NA in the output. If any interpolated expression is NULL, it will be NULL in the output.
 }
 \examples{
 name <- "Alice"
