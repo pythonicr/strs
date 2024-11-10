@@ -483,7 +483,7 @@ issue or submit a pull request on our GitHub repository.
 - [x] endswith
 - [x] expandtabs
 - [x] find
-- [ ] format
+- [x] format
 - [ ] format_map
 - [ ] index
 - [x] isalnum

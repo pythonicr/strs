@@ -414,7 +414,7 @@ We welcome contributions to the **strs** package. If you have suggestions, bug r
   - [x] endswith
   - [x] expandtabs
   - [x] find
-  - [ ] format
+  - [x] format
   - [ ] format_map
   - [ ] index
   - [x] isalnum
