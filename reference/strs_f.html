@@ -63,9 +63,9 @@ more than one string, they are concatenated before interpolation.</p></dd>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Under the hood, this function uses the <code><a href="https://glue.tidyverse.org/reference/glue.html" class="external-link">glue::glue()</a></code> function to perform the interpolation. However, this
-function doesn't let you change the evaluation context or perform any string trimming. If any interpolated expression
-is NA, it will be NA in the output. If any interpolated expression is NULL, it will be NULL in the output.</p>
+    <p>Under the hood, this function uses the <code><a href="https://glue.tidyverse.org/reference/glue.html" class="external-link">glue::glue_data()</a></code> function to perform the interpolation. However,
+this function doesn't let you change the evaluation context or perform any string trimming. If any interpolated
+expression is NA, it will be NA in the output. If any interpolated expression is NULL, it will be NULL in the output.</p>
     </div>
 
     <div class="section level2">
@@ -73,15 +73,11 @@ is NA, it will be NA in the output. If any interpolated expression is NULL, it w
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">name</span> <span class="op">&lt;-</span> <span class="st">"Alice"</span></span></span>
 <span class="r-in"><span><span class="va">age</span> <span class="op">&lt;-</span> <span class="fl">30</span></span></span>
 <span class="r-in"><span><span class="fu">strs_f</span><span class="op">(</span><span class="st">"My name is {name} and I am {age} years old."</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> Failed to evaluate glue component {name}</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error:</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> object 'name' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "My name is Alice and I am 30 years old."</span>
 <span class="r-in"><span><span class="co"># Output: "My name is Alice and I am 30 years old."</span></span></span>
 <span class="r-in"><span><span class="va">age</span> <span class="op">&lt;-</span> <span class="cn">NULL</span></span></span>
 <span class="r-in"><span><span class="fu">strs_f</span><span class="op">(</span><span class="st">"My name is {name} and I am {age} years old."</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> Failed to evaluate glue component {name}</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error:</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> object 'name' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "My name is Alice and I am NULL years old."</span>
 <span class="r-in"><span><span class="co"># Output: "My name is Alice and I am NULL years old."</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
