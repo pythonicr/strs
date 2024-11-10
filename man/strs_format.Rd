@@ -9,6 +9,12 @@ strs_format(string, ..., .data = NULL)
 \arguments{
 \item{string}{A character vector containing the string with placeholders in curly braces \code{{}}. If the vector contains
 more than one string, they are concatenated before interpolation.}
+
+\item{...}{Named arguments that will be made available during \code{string} interpolation. Note that these will take
+precedence over values in \code{.data}.}
+
+\item{.data}{List-like (e.g., data.frame, list, environment, etc.) object that will be used for lookups during
+\code{string} interpolation.}
 }
 \value{
 A character vector with the placeholders replaced by the evaluated expressions.

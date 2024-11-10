@@ -5,6 +5,10 @@
 #'
 #' @param string A character vector containing the string with placeholders in curly braces `{}`. If the vector contains
 #' more than one string, they are concatenated before interpolation.
+#' @param ... Named arguments that will be made available during `string` interpolation. Note that these will take
+#' precedence over values in `.data`.
+#' @param .data List-like (e.g., data.frame, list, environment, etc.) object that will be used for lookups during
+#' `string` interpolation.
 #' @return A character vector with the placeholders replaced by the evaluated expressions.
 #'
 #' @details Under the hood, this function uses the `glue::glue_data()` function to perform the interpolation. By
