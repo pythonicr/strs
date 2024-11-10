@@ -22,6 +22,9 @@ install.packages("devtools")
 
 # Install strs package from GitHub
 devtools::install_github("pythonicr/strs")
+
+# Using pacman
+pacman::p_load_gh("pythonicr/strs")
 ```
 
 ## Getting Started
